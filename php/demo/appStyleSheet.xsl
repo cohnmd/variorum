@@ -47,13 +47,13 @@
 
     <xsl:template match="tei:div3">
         <xsl:element name="span"><xsl:attribute name="id">fragment</xsl:attribute>
-            <xsl:apply-templates/>
-        </xsl:element>
+            <xsl:element name="Blockquote"><xsl:apply-templates/>
+        </xsl:element></xsl:element>
     </xsl:template>
     
     <xsl:template match="tei:l">
 
-        <xsl:element name="BR"/>
+        
         <xsl:apply-templates/>
         <xsl:element name="BR"/>
         

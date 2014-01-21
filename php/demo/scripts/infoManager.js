@@ -69,24 +69,34 @@ function addTag () {
 
 
 function manageContext() {    
-/*    document.getElementById("sourceText").insertAdjacentHTML('afterbegin', "<span id='preContext'>");
-    document.getElementById("fragment").insertAdjacentHTML('beforebegin', "</span>");
-    var oDiv = document.getElementById("text");
-var firstText = "";
-for (var i = 0; i < oDiv.childNodes.length; i++) {
-    var curNode = oDiv.childNodes[i];
-    if (curNode.nodeName === "#text") {
-        firstText = curNode.nodeValue;
-        break;
-    }
+    var preText = "";
+    i=0;
+    while (i < document.getElementById("sourceText").childNodes.length) {
+    var node = document.getElementById("sourceText").childNodes[i];
+    if (node.nodeName == "#text" && node.nodeValue!="") {
+        preText = node.nodeValue;
+        break; }
+        
+        i++;
 }
-firstTextWrapped = '<span id="preContext">' + firstText + '</span>';
-oDiv.innerHTML = oDiv.innerHTML.replace(firstText, firstTextWrapped);
+
+    preTextTagged = "<span id='preContext'>" + preText + "</span>";
+    document.getElementById("sourceText").innerHTML = document.getElementById("sourceText").innerHTML.replace(preText, preTextTagged);
     
     
-    */
-    console.log(document.getElementById("sourceText").innerHTML);
+    var postText = "";
+    var k = document.getElementById("fragment");
+    while (k!=null) {
+    if (node.nodeName == "#text" && node.nodeValue!="") {
+            postText = k.nodeValue;
+        }
+        k = k.nextSibling;
+    }
+    
+    postTextTagged = "<span id='postContext'>" + postText + "</span>"
+    document.getElementById("sourceText").innerHTML = document.getElementById("sourceText").innerHTML.replace(postText, postTextTagged);
     var label = parent.contFrame.document.createElement("label");
+    console.log(document.getElementById("sourceText").innerHTML);
     label.innerHTML = "Show Context";    
     var contextCheck = parent.contFrame.document.createElement("input");
     contextCheck.setAttribute("type", "checkbox")
@@ -100,12 +110,12 @@ oDiv.innerHTML = oDiv.innerHTML.replace(firstText, firstTextWrapped);
 function displayContext() {
     document.getElementById("contextCheck")
         if (parent.contFrame.document.getElementById("contextCheck").checked==0) {
-            document.getElementById("fullContext").style.display = 'none';
-            document.getElementById("noContext").style.display = 'inline';
+            document.getElementById("preContext").style.display = 'none';
+            document.getElementById("postContext").style.display = 'none';
         }
         else {
-//            document.getElementById("noContext").style.display = 'none';
-  //          document.getElementById("fullContext").style.display = 'block';
+            document.getElementById("preContext").style.display = 'block';
+            document.getElementById("postContext").style.display = 'block';
             
         }
 }
