@@ -1,0 +1,13 @@
+https://www.googleapis.com/fusiontables/v1/query?sql=SELECT 'Translation' FROM 10nvdo3g6hAmj_oKpYJfrt3zRm2ez0693iXp_P6U&key=AIzaSyCblijNi4TBgM8rF6aaGurTGRrnhsgHxf0
+
+
+
+https://www.googleapis.com/fusiontables/v1/query?sql=SELECT Number FROM 10nvdo3g6hAmj_oKpYJfrt3zRm2ez0693iXp_P6U WHERE Number=* &key=AIzaSyCblijNi4TBgM8rF6aaGurTGRrnhsgHxf0 
+
+
+https://www.googleapis.com/fusiontables/v1/tables/10nvdo3g6hAmj_oKpYJfrt3zRm2ez0693iXp_P6U&key=AIzaSyCblijNi4TBgM8rF6aaGurTGRrnhsgHxf0/columns
+
+
+
+
+https://www.googleapis.com/fusiontables/v1/query?sql=SELECT%20Translation%20FROM%2010nvdo3g6hAmj_oKpYJfrt3zRm2ez0693iXp_P6U%20WHERE%20Number=1%20&key=AIzaSyCblijNi4TBgM8rF6aaGurTGRrnhsgHxf0

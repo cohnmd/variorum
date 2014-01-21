@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="http://www.tei-c.org/ns/1.0" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="TEI">
+      <element name="teiHeader">
+        <element name="fileDesc">
+          <element name="titleStmt">
+            <element name="title">
+              <text/>
+            </element>
+          </element>
+          <element name="publicationStmt">
+            <ref name="p"/>
+          </element>
+          <element name="sourceDesc">
+            <ref name="p"/>
+          </element>
+        </element>
+        <element name="encodingDesc">
+          <element name="editorialDecl">
+            <ref name="p"/>
+          </element>
+          <element name="variantEncoding">
+            <attribute name="location">
+              <data type="NCName"/>
+            </attribute>
+            <attribute name="method">
+              <data type="NCName"/>
+            </attribute>
+          </element>
+          <element name="listWit">
+            <element name="witness">
+              <attribute>
+                <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+                <data type="NCName"/>
+              </attribute>
+              <text/>
+            </element>
+            <oneOrMore>
+              <element name="editor">
+                <attribute>
+                  <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+                  <data type="NCName"/>
+                </attribute>
+                <text/>
+              </element>
+            </oneOrMore>
+          </element>
+        </element>
+      </element>
+      <element name="text">
+        <element name="body">
+          <element name="div1">
+            <attribute name="type">
+              <data type="NCName"/>
+            </attribute>
+            <attribute>
+              <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+              <data type="NCName"/>
+            </attribute>
+            <element name="div2">
+              <attribute name="type">
+                <data type="NCName"/>
+              </attribute>
+              <attribute>
+                <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+              </attribute>
+              <ref name="p"/>
+            </element>
+          </element>
+        </element>
+      </element>
+    </element>
+  </start>
+  <define name="p">
+    <element name="p">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <element name="div3">
+            <attribute name="type">
+              <data type="NCName"/>
+            </attribute>
+            <attribute>
+              <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+              <data type="integer"/>
+            </attribute>
+            <element name="lg">
+              <oneOrMore>
+                <element name="l">
+                  <attribute name="n">
+                    <data type="integer"/>
+                  </attribute>
+                  <oneOrMore>
+                    <choice>
+                      <text/>
+                      <element name="app">
+                        <optional>
+                          <element name="lem">
+                            <attribute name="wit"/>
+                            <data type="NCName"/>
+                          </element>
+                        </optional>
+                        <oneOrMore>
+                          <element name="rdg">
+                            <attribute name="wit"/>
+                            <text/>
+                          </element>
+                        </oneOrMore>
+                      </element>
+                    </choice>
+                  </oneOrMore>
+                </element>
+              </oneOrMore>
+            </element>
+          </element>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+</grammar>

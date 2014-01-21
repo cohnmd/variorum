@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Krates fr. 1 K.-A.</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Generated for testing purposes on 8/26/2013</p>        
+         </publicationStmt>
+         <sourceDesc>
+            <p>Adapted from K.-A.</p>
+         </sourceDesc>
+      </fileDesc>
+     <encodingDesc><editorialDecl>
+        <p>A test document using selected items from the app crit to Krates fr. 1 K-A</p>
+     </editorialDecl>
+        <variantEncoding method="parallel-segmentation" location="internal"/>
+        <listWit>
+           <witness xml:id="Athenaeus">Athenaeus of Naucratis</witness>
+           <editor xml:id="Kock">Kock</editor>
+           <editor xml:id="Jacobs">Jacobs</editor>
+        </listWit>
+     </encodingDesc>
+  </teiHeader>
+  <text>
+      <body>
+      <div1 type="comedy" xml:id="Geitones">
+         <div2 type="fragmentNum" xml:id="fr1">
+    <lg><l n="1">νῦν μὲν γὰρ ἡμῖν 
+            <app>
+               <lem wit="#Athenaeus">παιδικῶν</lem>
+               
+               <rdg resp="#Kock">περδίκων</rdg>
+            </app>
+           
+            <app>
+            <lem wit="#Athenaeus">δαίς</lem>
+            
+               <rdg resp="#Jacobs">ἅλις</rdg>
+            </app>
+    </l></lg>   
+         </div2>
+      </div1>
+      
+      </body>
+  </text>
+</TEI>
