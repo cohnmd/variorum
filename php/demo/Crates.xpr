@@ -10,16 +10,16 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>appStyleSheet.xsl</String>
+                                    <String>fragments/encodedFragments/kratesfr1.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>appStyleSheet</String>
+                                        <String>fragmentTransform</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
-                                        <String>XML</String>
+                                        <String>XSL</String>
                                     </list>
                                 </field>
                             </scenarioAssociation>
@@ -35,6 +35,21 @@
                                 <field name="scenarioTypes">
                                     <list>
                                         <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>appStyleSheet.xsl</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>appStyleSheet</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XML</String>
                                     </list>
                                 </field>
                             </scenarioAssociation>
@@ -66,7 +81,7 @@
                                     <String></String>
                                 </field>
                                 <field name="inputXSLURL">
-                                    <String>file:/C:/Users/Matt/Desktop/Dead%20Projects/GCF/appStyleSheet.xsl</String>
+                                    <String>file:/C:/Users/Matt/Desktop/Dead%20Projects/repo/php/demo/appStyleSheet.xsl</String>
                                 </field>
                                 <field name="inputXMLURL">
                                     <String>${currentFileURL}</String>
