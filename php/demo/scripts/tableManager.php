@@ -24,8 +24,9 @@ const KEY_FILE = '../../../../key.p12';
         }
 
 	$service = new Google_FusiontablesService($client);
+	$fragNum = $_GET["num"];
 	$tag = $_GET["tag"];
-	$testQ = "insert into 15yMhAHV_HBGEuY_iHVRSOA2I3IfHJsjMmmq-0HY ('Number') VALUES (".$tag.")";
+	$testQ = "insert into 1zaUYJa9cPl90Buj5l8QsmJwyEBKRDWJtGuMwrHg ('Number', 'Tag') VALUES (".$fragNum.", ".$tag.")";
 
 	$resp = $service->query->sql($testQ);
 	echo $resp;	
