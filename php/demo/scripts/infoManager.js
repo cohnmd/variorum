@@ -18,6 +18,7 @@ function regBuildInfo (buildInfo) {
 }
 
 function loadTags(fragNumber) {
+  console.log("loadtags loaded");
   this.fragNumber = fragNumber;
     var tableID= "1zaUYJa9cPl90Buj5l8QsmJwyEBKRDWJtGuMwrHg";
     var key ="AIzaSyCblijNi4TBgM8rF6aaGurTGRrnhsgHxf0";
