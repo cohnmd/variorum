@@ -38,10 +38,7 @@ function loadTags(fragNumber) {
        tags = tags + tagList.rows[n]
        n++;
    }
-        parent.contFrame.document.getElementById("tags").innerHTML=tags;
-      
- 
-        tagEntry(); 
+        parent.contFrame.document.getElementById("tags").innerHTML=tags; 
 }
 
 function tagEntry() {
