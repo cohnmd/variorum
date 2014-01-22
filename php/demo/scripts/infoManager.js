@@ -78,7 +78,7 @@ function addTag () {
        console.log("Query:" + query);
        phpHook.open( "GET", query, false );
        phpHook.send(null);
-       parent.contFrame.document.getElementById("tags").innerHTML;
+       parent.contFrame.document.getElementById("tags").innerHTML = "";
 //       loadTags(fragNumber);
 }
 }
