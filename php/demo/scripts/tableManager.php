@@ -1,6 +1,6 @@
 <?php
-require_once '../../google-api-php-client/src/Google_Client.php';
-require_once '../../google-api-php-client/src/contrib/Google_FusiontablesService.php';
+require_once 'google-api-php-client/src/Google_Client.php';
+require_once 'google-api-php-client/src/contrib/Google_FusiontablesService.php';
 
 const CLIENT_ID = '11727539956-d3o5988vu0kar1adkjkmsmolbc1ja50s.apps.googleusercontent.com';
 const FT_SCOPE = 'https://www.googleapis.com/auth/fusiontables';
