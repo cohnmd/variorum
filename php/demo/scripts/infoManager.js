@@ -63,7 +63,10 @@ function tagEntry() {
 
 function addTag () {
        newTag = parent.contFrame.document.getElementById("newTag").value; 
-       //send fragNumber and newTag to PHP script insertTags
+       phpHook = new XMLHttpRequest();     
+       query = "tableManager.php?tag=" + newTag;
+       phpHook.open( "GET", query, false );
+       fusionResponse.send(null);
 }
 
 
