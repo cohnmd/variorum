@@ -1,5 +1,5 @@
 var fragNumber;
-
+var oldTag="";
 
 function regFragment(fragment){
    parent.contFrame.document.getElementById("fragment").innerHTML=fragment;
@@ -69,13 +69,14 @@ function addTag () {
            alert("Please only submit one tag at a time.");
        }
        
-       else {
+       if (newTag!="" && newTag!=oldTag) {
        phpHook = new XMLHttpRequest();     
        query = "http://" + document.location.hostname + "/demo/scripts/tableManager.php?num=" + fragNumber + "&tag=" + "'" + newTag + "'";
        console.log("Query:" + query);
        phpHook.open( "GET", query, false );
        phpHook.send(null);
-       parent.contFrame.document.getElementById("tags").innerHTML = parent.contFrame.document.getElementById("tags").innerHTML + "; " + newTag;        
+       parent.contFrame.document.getElementById("tags").innerHTML = parent.contFrame.document.getElementById("tags").innerHTML + "; " + newTag;
+       oldTag = newTag;
 }
 }
 
