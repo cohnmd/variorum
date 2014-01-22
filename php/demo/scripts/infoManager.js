@@ -1,5 +1,5 @@
 var fragNumber;
-var init=0;
+
 
 function regFragment(fragment){
    parent.contFrame.document.getElementById("fragment").innerHTML=fragment;
@@ -41,10 +41,7 @@ function loadTags(fragNumber) {
    }
         parent.contFrame.document.getElementById("tags").innerHTML=tags; 
         
-        if (init==0) {
         tagEntry();
-        init = 1;
-        }
         
 }
 
@@ -78,8 +75,7 @@ function addTag () {
        console.log("Query:" + query);
        phpHook.open( "GET", query, false );
        phpHook.send(null);
-       parent.contFrame.document.getElementById("tags").innerHTML = "";
-//       loadTags(fragNumber);
+       parent.contFrame.document.getElementById("tags").innerHTML = parent.contFrame.document.getElementById("tags").innerHTML + "; " + newTag;        
 }
 }
 
