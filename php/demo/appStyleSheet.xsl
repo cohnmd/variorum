@@ -15,6 +15,7 @@
                 
             loadApp();
             manageContext();
+            
             </script>
         </HTML>    
     </xsl:template>
@@ -35,7 +36,6 @@
             var fragNumber = "<xsl:value-of select="//tei:div3/@xml:id"/>";
             
             loadTags(fragNumber);
-            tagEntry();
             loadTrans(fragNumber);
         </script>
         <xsl:apply-templates/>

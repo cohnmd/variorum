@@ -1,4 +1,5 @@
 var fragNumber;
+var init=0;
 
 function regFragment(fragment){
    parent.contFrame.document.getElementById("fragment").innerHTML=fragment;
@@ -39,6 +40,12 @@ function loadTags(fragNumber) {
        n++;
    }
         parent.contFrame.document.getElementById("tags").innerHTML=tags; 
+        
+        if (init==0) {
+        tagEntry();
+        init = 1;
+        }
+        
 }
 
 function tagEntry() {
