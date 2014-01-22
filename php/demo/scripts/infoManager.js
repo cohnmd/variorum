@@ -64,7 +64,7 @@ function tagEntry() {
 function addTag () {
        newTag = parent.contFrame.document.getElementById("newTag").value; 
        phpHook = new XMLHttpRequest();     
-       query = "http://" + document.location.hostname + "/demo/scripts/tableManager.php?tag=" + newTag;
+       query = "http://" + document.location.hostname + "/demo/scripts/tableManager.php?num=" + fragNumber + "&tag=" + "'" + newTag + "'";
        console.log("Query:" + query);
        phpHook.open( "GET", query, false );
        phpHook.send(null);
