@@ -65,8 +65,9 @@ function addTag () {
        newTag = parent.contFrame.document.getElementById("newTag").value; 
        phpHook = new XMLHttpRequest();     
        query = "tableManager.php?tag=" + newTag;
+       console.log("Query:" + query);
        phpHook.open( "GET", query, false );
-       fusionResponse.send(null);
+       phpHook.send(null);
 }
 
 
@@ -99,7 +100,6 @@ function manageContext() {
     postTextTagged = "<span id='postContext'>" + postText + "</span>"
     document.getElementById("sourceText").innerHTML = document.getElementById("sourceText").innerHTML.replace(postText, postTextTagged);
     var label = parent.contFrame.document.createElement("label");
-    console.log(document.getElementById("sourceText").innerHTML);
     label.innerHTML = "Show Context";    
     var contextCheck = parent.contFrame.document.createElement("input");
     contextCheck.setAttribute("type", "checkbox")
