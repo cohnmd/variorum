@@ -63,11 +63,18 @@ function tagEntry() {
 
 function addTag () {
        newTag = parent.contFrame.document.getElementById("newTag").value; 
+       
+       if (newTag.indexOf(",")>-1) {
+           alert("Please only submit one tag at a time.");
+       }
+       
+       else {
        phpHook = new XMLHttpRequest();     
        query = "http://" + document.location.hostname + "/demo/scripts/tableManager.php?num=" + fragNumber + "&tag=" + "'" + newTag + "'";
        console.log("Query:" + query);
        phpHook.open( "GET", query, false );
        phpHook.send(null);
+}
 }
 
 
