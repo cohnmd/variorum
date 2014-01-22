@@ -18,7 +18,6 @@ function regBuildInfo (buildInfo) {
 }
 
 function loadTags(fragNumber) {
-  console.log("loadtags loaded");
   this.fragNumber = fragNumber;
     var tableID= "1zaUYJa9cPl90Buj5l8QsmJwyEBKRDWJtGuMwrHg";
     var key ="AIzaSyCblijNi4TBgM8rF6aaGurTGRrnhsgHxf0";
@@ -79,7 +78,8 @@ function addTag () {
        console.log("Query:" + query);
        phpHook.open( "GET", query, false );
        phpHook.send(null);
-       loadTags(fragNumber);
+       parent.contFrame.document.getElementById("tags").innerHTML;
+//       loadTags(fragNumber);
 }
 }
 
