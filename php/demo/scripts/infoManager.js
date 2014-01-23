@@ -84,14 +84,14 @@ function addTag () {
 
 function manageContext() {    
     var preText = "";
-    i=0;
-    while (i < document.getElementById("sourceText").childNodes.length) {
-    var node = document.getElementById("sourceText").childNodes[i];
+    index=0;
+    while (index < document.getElementById("sourceText").childNodes.length) {
+    var node = document.getElementById("sourceText").childNodes[index];
     if (node.nodeName == "#text" && node.nodeValue!="") {
         preText = node.nodeValue;
         break; }
         
-        i++;
+        index++;
 }
 
     preTextTagged = "<span id='preContext'>" + preText + "</span>";

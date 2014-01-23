@@ -66,7 +66,7 @@ p { padding-left: 15px; }
 <script type="text/javascript">   
 function tab(tab) {
 var i=0;
-var tabCount=3;
+var tabCount=4;
 while (i!=tabCount) {
     tabName = "tab" + i;
     document.getElementById(tabName).style.display = 'none';
@@ -100,12 +100,12 @@ document.getElementById('li_'+tab).setAttribute("class", "active");
                       Build Information: <span class="box"><span id="buildInfo"></span></span><BR></BR>
                       Tags: <span class="box"><span id="tags"></span></span><BR></BR>
                       <span id="addTag"></span><BR></BR>
-                      <span id="contextManager">Show/Hide Context</span>
+                      <span id="contextManager">Show Context</span>
                   </p>
                 </div>
                 
                 <div id="tab1"  style="display: none;">
-                    Editors and their Emmendations:
+                    Editors and their Emmendations (see bibliography for their editions):
                     <span id="wit">
                     </span>
                     <BR>
@@ -116,6 +116,9 @@ document.getElementById('li_'+tab).setAttribute("class", "active");
                     <center>Translation</center>(NB: This is a translation of the base text and does not include any emendations or alternate readings)<BR>
                     <BR><span class="box"><span id="trans"></span></span>
                 </div>
+                <div id="tab3" style="display: none;">
+                    <center>Bibliography</center>
+                    <BR><span id="bib"></span></BR>
             </div>
         </div>
     </body>

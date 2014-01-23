@@ -37,6 +37,7 @@
             
             loadTags(fragNumber);
             loadTrans(fragNumber);
+            loadBib(fragNumber);
         </script>
         <xsl:apply-templates/>
     </xsl:template>
@@ -106,6 +107,7 @@
             <script type="text/javascript" src="{$scriptPath}/appManager.js"></script>
             <script type="text/javascript" src="{$scriptPath}/transManager.js"></script>
             <script type="text/javascript" src="{$scriptPath}/infoManager.js"></script>
+            <script type="text/javascript" src="{$scriptPath}/bibManager.js"></script>
         </head>        
     </xsl:template>
     
