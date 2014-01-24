@@ -40,6 +40,21 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>fragments/transformedFragments/kratesfr1.html</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>fragmentTransform</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>fragments/encodedFragments/kratesfr1</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -135,7 +150,7 @@
                                     <String-array/>
                                 </field>
                                 <field name="xslTransformer">
-                                    <String>Saxon6.5.5</String>
+                                    <String>Saxon-PE</String>
                                 </field>
                                 <field name="extensionURLs">
                                     <String-array/>
@@ -235,6 +250,7 @@
         <file name="appStyleSheet.xsl"/>
         <file name="scripts/bibManager.js"/>
         <file name="Control.html"/>
+        <file name="scripts/fragmentSearch.php"/>
         <file name="index.html"/>
         <file name="scripts/infoManager.js"/>
         <file name="fragments/encodedFragments/kratesfr1.xml"/>

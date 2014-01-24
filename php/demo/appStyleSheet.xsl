@@ -102,8 +102,6 @@
     
     <xsl:template name="htmlHeaders">    
         <head>
-            <meta charset="UTF-8"/>
-                     
             <script type="text/javascript" src="{$scriptPath}/appManager.js"></script>
             <script type="text/javascript" src="{$scriptPath}/transManager.js"></script>
             <script type="text/javascript" src="{$scriptPath}/infoManager.js"></script>
