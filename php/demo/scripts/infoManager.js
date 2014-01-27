@@ -3,6 +3,7 @@ var oldTag="";
 
 function regFragment(fragment){
    parent.contFrame.document.getElementById("fragment").innerHTML=fragment;
+   parent.title = fragment;
 }
 
 function regPlayName (playName) {

@@ -249,9 +249,9 @@
         <file name="scripts/appManager.js"/>
         <file name="appStyleSheet.xsl"/>
         <file name="scripts/bibManager.js"/>
+        <file name="container.php"/>
         <file name="Control.html"/>
         <file name="scripts/fragmentSearch.php"/>
-        <file name="index.html"/>
         <file name="scripts/infoManager.js"/>
         <file name="fragments/encodedFragments/kratesfr1.xml"/>
         <file name="scripts/tableManager.php"/>
