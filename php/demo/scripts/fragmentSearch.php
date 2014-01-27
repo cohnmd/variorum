@@ -1,12 +1,26 @@
 <?php
 header('Content-Type: text/plain; charset=utf-8');
-$specialChars="ABCDEFGHJIKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΨΧΩ";
-$markDownChars="abcdefghjiklmnopqrstuvwxyzaßγδεζηθικλμνξοπρστυφχψω";
-echo $test;
+$specialChars="ABCDEFGHJIKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΨΧΩ
+άὰᾶἀἁἄἅἂἃἆἇᾴᾲᾷᾀᾁᾄᾅᾂᾃᾆᾇΆᾺἈἉἌἍἊἋἎἏἏᾈᾉᾌἍᾊᾋᾎᾏᾹ
+έὲἐἑἔἕἒἓΈῈἘἙἜἝἚἛ
+ῥῬ
+ίὶῖἰἱἴἵἲἳἶἷῐΐῒῗΊῚἸἹἼἽἺἻἾἿ
+όὸὀὁὄὅὂὃΌῸὈὉὌὍὊὋ
+ήὴῆἠἡἤἥἢἣἦἧῄῂῇᾐᾑᾔᾕᾒᾓᾖᾗ
+ΉῊἨἩἬἭἪἫἮἯᾘᾙᾜᾝᾚᾛᾞᾟ
+ώὼῶὠὡὤὥὢὣὦὧῴῲῷᾠᾡᾤᾥᾢᾣᾦᾧ
+ΏῺὨὩὬὭὪὫὮὯᾨᾩᾬᾭᾪᾫᾮᾯ
+";
+$markDownChars="abcdefghjiklmnopqrstuvwxyzaßγδεζηθικλμνξοπρστυφχψωααααααααααααααααααααααααααααααααααααααααααεεεεεεεεεεεεεεεερριιιιιιιιιιιιιιιιιιιιιιιιιοοοοοοοοοοοοοοοοηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωω";
+
+
+
+
 
 $searchTerm="Context";
 echo "\n";
-if (isset($searchTerm==1) {
+
+if (empty($_GET)!=1) {
 	$searchTerm = $_GET["q"];
 }
 
