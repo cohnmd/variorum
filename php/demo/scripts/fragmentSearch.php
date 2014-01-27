@@ -12,22 +12,33 @@ $specialChars="ABCDEFGHJIKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤ�
 ΏῺὨὩὬὭὪὫὮὯᾨᾩᾬᾭᾪᾫᾮᾯ
 ";
 $markDownChars="abcdefghjiklmnopqrstuvwxyzaßγδεζηθικλμνξοπρστυφχψωααααααααααααααααααααααααααααααααααααααααααεεεεεεεεεεεεεεεερριιιιιιιιιιιιιιιιιιιιιιιιιοοοοοοοοοοοοοοοοηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηηωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωωω";
+$fragmentsPath = "../fragments/encodedFragments/kratesfr1.xml";
 
-
-
-
-
-$searchTerm="Context";
-echo "\n";
-
-if (empty($_GET)!=1) {
-	$searchTerm = $_GET["q"];
+if (empty($_GET)==1) {
+    echo "No search term entered. Please go back and try again.";	
 }
 
-echo "Searcing for ".$searchTerm."....";
+else {
+$searchTerm = $_GET["q"];
+$fragments = scandir($fragmentsPath);
+
+if($fragments==false) {
+echo "No fragments for search; something has been misconfigured";
+}
+
+else {
+    foreach ($fragmentsPath as $frag) {
+    $result = searchFrag($frag);
+    echo "\n".$frag.": ".$result;
+    }
+}
+}
+
+
+function searchFrag($frag) {
 
 $doc = new DOMDocument();
-$doc->load('../fragments/encodedFragments/kratesfr1.xml');
+$doc->load($fragmentsPath."/".$frag);
 $xpath = new DOMXpath($doc);
 $xpath->registerNamespace('tei', 'http://www.tei-c.org/ns/1.0');
 $elements = $xpath->query("//tei:text//text()[contains(
@@ -37,10 +48,11 @@ translate('$searchTerm', '$specialChars','$markDownChars')
 
 )]");
 
-if (is_null($elements)) { echo "NULL"; }
+if (is_null($elements)) { return "No result"; }
 else { foreach ($elements as $element) {
 
-echo "\n".$element->nodeValue; 
+return $element->nodeValue; 
 } }
+}
 
 ?>
