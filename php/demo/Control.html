@@ -59,6 +59,11 @@ z-index: 5;
   border: 1px solid gray ;
 }
 
+.active {
+        text-decoration: underline;
+        
+}
+
 p { padding-left: 15px; }
 </style>
     
@@ -85,7 +90,7 @@ document.getElementById('li_'+tab).setAttribute("class", "active");
     <body>        
         <div id="tabs">
             <ul>
-                <li id="li_tab0" onclick="tab('tab0')"><a>Fragment Information</a></li>
+                <li id="li_tab0" class="active" onclick="tab('tab0')"><a>Fragment Information</a></li>
                 <li id="li_tab1" onclick="tab('tab1')"><a>Apparatus Toolkit</a></li>
                 <li id="li_tab2" onclick="tab('tab2')"><a>Translation</a></li>
                 <li id="li_tab3" onclick="tab('tab3')"><a>Bibliography</a></li>
@@ -100,12 +105,12 @@ document.getElementById('li_'+tab).setAttribute("class", "active");
                       Build Information: <span class="box"><span id="buildInfo"></span></span><BR></BR>
                       Tags: <span class="box"><span id="tags"></span></span><BR></BR>
                       <span id="addTag"></span><BR></BR>
-                      <span id="contextManager">Show Context</span>
+                      <span id="contextManager"></span>
                   </p>
                 </div>
                 
                 <div id="tab1"  style="display: none;">
-                    Editors and their Emmendations (see bibliography for their editions):
+                    <center>Editors and their Emmendations (see bibliography for their editions):<BR/><BR/></center>
                     <span id="wit">
                     </span>
                     <BR>
@@ -113,12 +118,12 @@ document.getElementById('li_'+tab).setAttribute("class", "active");
                 </div>
                 
                 <div id="tab2" style="display: none;">
-                    <center>Translation</center>(NB: This is a translation of the base text and does not include any emendations or alternate readings)<BR>
+                    <center>Translation</center>(NB: This is a translation of the base text and does not include any emendations or alternate readings)<BR><BR>
                     <BR><span class="box"><span id="trans"></span></span>
                 </div>
                 <div id="tab3" style="display: none;">
                     <center>Bibliography</center>
-                    <BR><span id="bib"></span></BR>
+                    <BR><BR><span id="bib"></span>
             </div>
         </div>
     </body>
