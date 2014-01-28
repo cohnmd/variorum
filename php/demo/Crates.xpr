@@ -255,6 +255,7 @@
         <file name="scripts/infoManager.js"/>
         <file name="fragments/encodedFragments/kratesfr1.xml"/>
         <file name="search.html"/>
+        <file name="scripts/searchJS.js"/>
         <file name="scripts/tableManager.php"/>
         <file name="scripts/transManager.js"/>
     </projectTree>

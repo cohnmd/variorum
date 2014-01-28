@@ -19,12 +19,35 @@ function regBuildInfo (buildInfo) {
 }
 
 function loadTags(fragNumber) {
+          parent.contFrame.document.getElementById("tags").innerHTML = "Loading. . ."
   this.fragNumber = fragNumber;
     var tableID= "1zaUYJa9cPl90Buj5l8QsmJwyEBKRDWJtGuMwrHg";
     var key ="AIzaSyCblijNi4TBgM8rF6aaGurTGRrnhsgHxf0";
     var queryHeader = "https://www.googleapis.com/fusiontables/v1/query?sql=";
    query = queryHeader + "SELECT Tag FROM " + tableID + " WHERE Number=" + fragNumber + "&key=" + key;
-   var fusionResponse = null;
+       fusionResponse = new XMLHttpRequest();   
+        fusionResponse.onreadystatechange= function() {
+	        if (fusionResponse.readyState==4 && fusionResponse.status==200) {
+	        var tagList = JSON.parse(fusionResponse.responseText);
+	        tags = "";
+	        n=0;
+	        while (n!=tagList.rows.length) {
+
+       if (n!=0) {
+           tags = tags + "; "
+       }
+       tags = tags + tagList.rows[n]
+       n++;
+   }
+        parent.contFrame.document.getElementById("tags").innerHTML=tags; 
+        
+        tagEntry();
+			}
+		}
+		fusionResponse.open( "GET", query, true);
+        fusionResponse.send();
+  
+/*  var fusionResponse = null;
 
    fusionResponse = new XMLHttpRequest();
    fusionResponse.open( "GET", query, false );
@@ -43,7 +66,7 @@ function loadTags(fragNumber) {
         parent.contFrame.document.getElementById("tags").innerHTML=tags; 
         
         tagEntry();
-        
+       */ 
 }
 
 function tagEntry() {

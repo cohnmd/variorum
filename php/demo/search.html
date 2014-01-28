@@ -6,25 +6,44 @@
         <script type="text/javascript">
 	var resultPath = "container.php?fr=";
 
-         function textSearch() {
-	 query = document.getElementById("textQuery").value;
-         results = searchFragText(query, document.getElementById("contextBox").checked);
+     function textSearch() {
+     
+	 query = document.getElementById("textQuery").value.trim();
+	if (query!="") {
+	document.getElementById("results").innerHTML = "Searching. . .";
+     results = searchFragText(query, document.getElementById("contextBox").checked);
 	 displayResults(results);
+	}
+	else {
+	document.getElementById("results").innerHTML = "Please enter a valid search term.";
+	}
 	}
 	
 	function tagSearch() {
-	query = document.getElementById("tagQuery").value;
+	query = document.getElementById("tagQuery").value.trim();
+	if (query!="") {
+	document.getElementById("results").innerHTML = "Searching. . .";
 	results = searchTags(query);
 	displayResults(results);
 	}
+	else {
+		document.getElementById("results").innerHTML = "Please enter a valid search term.";
+		}
+	}
 
 	function bibSearch() {
-	query = document.getElementById("bibQuery").value;
+	query = document.getElementById("bibQuery").value.trim();
+	if (query!="") {
+	document.getElementById("results").innerHTML = "Searching. . .";
 	results = searchBib(query);
 	displayResults(results);	
 	}
-
-        function displayResults(results) { 
+	else {
+	document.getElementById("results").innerHTML = "Please enter a valid search term.";
+	}
+    }
+    
+    function displayResults(results) { 
 	i = 0;
 	document.getElementById("results").innerHTML = "";
 	while (i!=results.length) {
