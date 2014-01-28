@@ -4,11 +4,20 @@ function loadBib (fragNumber) {
     var key ="AIzaSyCblijNi4TBgM8rF6aaGurTGRrnhsgHxf0";
     var queryHeader = "https://www.googleapis.com/fusiontables/v1/query?sql=";
     query = queryHeader + "SELECT Classification, Entry FROM " + tableID + " WHERE Number=" + fragNumber + "&key=" + key;
-    var fusionResponse = null;
-    fusionResponse = new XMLHttpRequest();
-   fusionResponse.open( "GET", query, false );
-   fusionResponse.send( null );
-   var bibArray = JSON.parse(fusionResponse.responseText);
+	parent.contFrame.document.getElementById("bib").innerHTML = "Loading. . .";
+	var fusionResponse = new XMLHttpRequest();
+	fusionResponse.onreadystatechange= function() {
+	        if (fusionResponse.readyState==4 && fusionResponse.status==200) {
+		parent.contFrame.document.getElementById("bib").innerHTML = "";
+		genBib(fusionResponse.responseText);
+		} }
+   fusionResponse.open( "GET", query, true);
+   fusionResponse.send();
+}
+
+function genBib(responseText) {
+
+   var bibArray = JSON.parse(responseText);
    editionsContainer = parent.contFrame.document.createElement("span");
    editionsContainer.setAttribute("id", "editions")
    editionsContainer.innerHTML = "<b>Editions</b><BR>"

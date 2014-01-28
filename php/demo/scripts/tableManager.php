@@ -6,7 +6,7 @@ const CLIENT_ID = '11727539956-d3o5988vu0kar1adkjkmsmolbc1ja50s.apps.googleuserc
 const FT_SCOPE = 'https://www.googleapis.com/auth/fusiontables';
 const SERVICE_ACCOUNT_NAME = '11727539956-d3o5988vu0kar1adkjkmsmolbc1ja50s@developer.gserviceaccount.com';
 const KEY_FILE = '../../../../key.p12';
-
+http_response_code(404);
       
         $client = new Google_Client();
         $client->setApplicationName("API Project");

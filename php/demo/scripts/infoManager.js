@@ -19,7 +19,7 @@ function regBuildInfo (buildInfo) {
 }
 
 function loadTags(fragNumber) {
-          parent.contFrame.document.getElementById("tags").innerHTML = "Loading. . ."
+  parent.contFrame.document.getElementById("tags").innerHTML = "Loading. . ."
   this.fragNumber = fragNumber;
     var tableID= "1zaUYJa9cPl90Buj5l8QsmJwyEBKRDWJtGuMwrHg";
     var key ="AIzaSyCblijNi4TBgM8rF6aaGurTGRrnhsgHxf0";
@@ -47,26 +47,7 @@ function loadTags(fragNumber) {
 		fusionResponse.open( "GET", query, true);
         fusionResponse.send();
   
-/*  var fusionResponse = null;
 
-   fusionResponse = new XMLHttpRequest();
-   fusionResponse.open( "GET", query, false );
-   fusionResponse.send(null);
-   var tagList = JSON.parse(fusionResponse.responseText);
-   tags = "";
-   n=0;
-   while (n!=tagList.rows.length) {
-
-       if (n!=0) {
-           tags = tags + "; "
-       }
-       tags = tags + tagList.rows[n]
-       n++;
-   }
-        parent.contFrame.document.getElementById("tags").innerHTML=tags; 
-        
-        tagEntry();
-       */ 
 }
 
 function tagEntry() {
@@ -78,29 +59,38 @@ function tagEntry() {
         tagEntry.setAttribute("name", "Add a Tag:")
         var tagButton = parent.contFrame.document.createElement("input");
         tagButton.setAttribute("type", "button");
+	tagButton.setAttribute("id", "tagButton");
         tagButton.setAttribute("value", "Submit");
         label.appendChild(tagEntry);
         label.appendChild(tagButton);
         parent.contFrame.document.getElementById("addTag").appendChild(label);
         tagButton.onclick = addTag;
-
 }
 
 function addTag () {
-       newTag = parent.contFrame.document.getElementById("newTag").value; 
-       
-       if (newTag.indexOf(",")>-1) {
+       parent.contFrame.document.getElementById("tagButton").disabled= true;
+	newTag = parent.contFrame.document.getElementById("newTag").value; 
+       parent.contFrame.document.getElementById("newTag").value = "Adding tag. . .";
+	
+	if (newTag.indexOf(",")>-1) {
            alert("Please only submit one tag at a time.");
        }
        
        if (newTag!="" && newTag!=oldTag) {
        phpHook = new XMLHttpRequest();     
        query = "http://" + document.location.hostname + "/demo/scripts/tableManager.php?num=" + fragNumber + "&tag=" + "'" + newTag + "'";
-       console.log("Query:" + query);
-       phpHook.open( "GET", query, false );
-       phpHook.send(null);
-       parent.contFrame.document.getElementById("tags").innerHTML = parent.contFrame.document.getElementById("tags").innerHTML + "; " + newTag;
-       oldTag = newTag;
+	phpHook.onreadystatechange= function() {	        
+	if (phpHook.readyState==4 && phpHook.status==200) {
+	       parent.contFrame.document.getElementById("tagButton").disabled=false;
+		parent.contFrame.document.getElementById("newTag").value = "";
+		parent.contFrame.document.getElementById("tags").innerHTML = parent.contFrame.document.getElementById("tags").innerHTML + "; " + newTag;
+       		oldTag = newTag;
+		}
+}
+       phpHook.open( "GET", query, true);
+	
+       phpHook.send();
+
 }
 }
 
