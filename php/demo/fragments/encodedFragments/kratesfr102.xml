@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>fr. 1 K.-A.</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Generated for testing purposes on 8/26/2013</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Adapted from K.-A.</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <p>A test document using selected items from the app crit to Krates fr. 1 K-A</p>
+         </editorialDecl>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+         <listWit>
+            <witness xml:id="Athenaeus">Athenaeus of Naucratis</witness>
+            <editor xml:id="Kock">Johnny Kock</editor>
+            <editor xml:id="Jacobs">Gillian Jacobs</editor>
+         </listWit>
+      </encodingDesc>
+
+   </teiHeader>
+
+   <text>
+      <body> 
+         <div1 type="comedy" xml:id="Geitones">
+            <div2 type="sourceText" xml:id="Athenaeus x.xxx">
+               <p>Context 1 2 3 
+               <div3 type="frag" xml:id="1">
+               <lg>
+                  <l n="1">νῦν μὲν γὰρ ἡμῖν <app>
+                        <lem wit="#Athenaeus">παιδικῶν</lem> <rdg wit="#Kock">περδίκων</rdg>
+                     </app> TEST TEST
+                     <app>
+                        <lem wit="#Athenaeus">δαίς</lem>
+                        <rdg wit="#Jacobs">ἅλις</rdg>
+                     </app>
+                     <app><rdg wit="#Jacobs">JACOBS READINGREADING</rdg>
+                        <rdg wit="#Kock">KOCK READING</rdg></app>
+                  </l>
+                  <l n="2">SECOND <app><rdg wit="Con">LINE</rdg><rdg wit="Cohn">LONG</rdg></app> OF TEXT</l>
+               </lg>
+            </div3>
+              context 4 5 6 </p>
+            </div2>
+   
+         </div1>
+
+      </body>
+   </text>
+</TEI>   

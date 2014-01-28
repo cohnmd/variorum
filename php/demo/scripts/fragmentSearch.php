@@ -1,6 +1,12 @@
 <?php
 error_reporting(0); 
-header('Content-Type: text/HTML; charset=utf-8');
+header('Content-Type: text/plain; charset=utf-8');
+
+class result {
+	public $loc = "";
+	public $hit = "";
+}
+
 $specialChars="ABCDEFGHJIKLMNOPQRSTUVWXYZÎ‘Î’Î“Î”Î•Î–Î—Î˜Î™ÎšÎ›ÎœÎÎžÎŸÎ Î¡Î£Î¤Î¥Î¦Î¨Î§Î©
 Î¬á½°á¾¶á¼€á¼á¼„á¼…á¼‚á¼ƒá¼†á¼‡á¾´á¾²á¾·á¾€á¾á¾„á¾…á¾‚á¾ƒá¾†á¾‡Î†á¾ºá¼ˆá¼‰á¼Œá¼á¼Šá¼‹á¼Žá¼á¼á¾ˆá¾‰á¾Œá¼á¾Šá¾‹á¾Žá¾á¾¹
 Î­á½²á¼á¼‘á¼”á¼•á¼’á¼“Îˆá¿ˆá¼˜á¼™á¼œá¼á¼šá¼›
@@ -14,7 +20,8 @@ $specialChars="ABCDEFGHJIKLMNOPQRSTUVWXYZÎ‘Î’Î“Î”Î•Î–Î—Î˜
 ";
 $markDownChars="abcdefghjiklmnopqrstuvwxyzaÃŸÎ³Î´ÎµÎ¶Î·Î¸Î¹ÎºÎ»Î¼Î½Î¾Î¿Ï€ÏÏƒÏ„Ï…Ï†Ï‡ÏˆÏ‰Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±Î±ÎµÎµÎµÎµÎµÎµÎµÎµÎµÎµÎµÎµÎµÎµÎµÎµÏÏÎ¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¹Î¿Î¿Î¿Î¿Î¿Î¿Î¿Î¿Î¿Î¿Î¿Î¿Î¿Î¿Î¿Î¿Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Î·Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰Ï‰";
 $fragmentsPath = "../fragments/encodedFragments/";
-echo "<HTML>";
+$resultsList = array();
+
 if (empty($_GET)==1) {
     echo "No search term entered. Please go back and try again.";	
 }
@@ -22,43 +29,51 @@ if (empty($_GET)==1) {
 else {
 $searchTerm = $_GET["q"];
 $fragments = scandir($fragmentsPath);
+
 if($fragments==false) {
 echo "No fragments to search; something on the server end has been misconfigured.";
 }
 
 else {
-	echo "Result (click to view):";
     foreach ($fragments as $frag) {
-
     if (stristr($frag, '.xml')!=false) {
-    $result = searchFrag($frag);  
-    echo "<BR/><BR/>"."<a href=../container.php?fr=".stristr($frag, '.xml', true).">".stristr($frag, '.xml', true).": ".$result."</a>";
-    }
- }
+    searchFrag($frag);  
+}
+}
+    $JSONResult = json_encode($resultsList);
+    echo $JSONResult;
     }
 }
 
 
 function searchFrag($frag) {
-global $fragmentsPath, $specialChars, $markDownChars, $searchTerm;
+global $fragmentsPath, $specialChars, $markDownChars, $searchTerm, $resultsList;
 
 $doc = new DOMDocument();
 $doc->load($fragmentsPath."/".$frag);
 $xpath = new DOMXpath($doc);
 $xpath->registerNamespace('tei', 'http://www.tei-c.org/ns/1.0');
-$elements = $xpath->query("//tei:text//text()[contains(
+
+if ($_GET["con"]!="true") {
+$scope = "//tei:lg"; }
+else {
+$scope = "//tei:text"; }
+
+$elements = $xpath->query($scope."//text()[contains(
 translate(., '$specialChars', '$markDownChars')
 ,
 translate('$searchTerm', '$specialChars','$markDownChars')
 
 )]");
 
-if (is_null($elements)) { return "No result"; }
-else { foreach ($elements as $element) {
+if (is_null($elements)) { return 0; }
 
-return $element->nodeValue; 
+else { foreach ($elements as $element) {
+	$newResult = new result();
+	$newResult->loc = stristr($frag, '.xml', true);
+	$newResult->hit = trim($element->nodeValue);
+	array_push($resultsList, $newResult);
 } }
 }
 
-echo "</HTML>";
 ?>

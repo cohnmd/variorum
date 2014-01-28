@@ -1,0 +1,49 @@
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <script type="text/javascript" src="scripts/searchJS.js"></script>
+        <script type="text/javascript">
+	var resultPath = "container.php?fr=";
+
+         function textSearch() {
+	 query = document.getElementById("textQuery").value;
+         results = searchFragText(query, document.getElementById("contextBox").checked);
+	 displayResults(results);
+	}
+	
+	function tagSearch() {
+	query = document.getElementById("tagQuery").value;
+	results = searchTags(query);
+	displayResults(results);
+	}
+
+	function bibSearch() {
+	query = document.getElementById("bibQuery").value;
+	results = searchBib(query);
+	displayResults(results);	
+	}
+
+        function displayResults(results) { 
+	i = 0;
+	document.getElementById("results").innerHTML = "";
+	while (i!=results.length) {
+        var resultLink = document.createElement('a');
+	resultLink.href= resultPath + results[i].loc;
+	displayString = results[i].loc.split("fr");
+	displayString = displayString[0] + " fr " + displayString[1];
+	console.log(displayString);
+	resultLink.appendChild(document.createTextNode(displayString + ": " + results[i].hit));
+	resultLink.appendChild(document.createElement('br'));
+	document.getElementById("results").appendChild(resultLink);
+         i++;
+          }
+        }
+        </script>
+        <title>Search the Fragments</title>
+    </head>
+    <body><h3>Search the fragments:</h3><BR/><label>Search the text of the fragments: <input type="text" id="textQuery"></input><input type="button" value="submit" onclick="textSearch()"></input> (include the context of the fragment in search: <input type="checkbox" id = "contextBox" checked=true></input>)</label><BR><BR>
+<label>Search fragment tags:<input type="text" id="tagQuery"></input><input type="button" value="submit" onclick="tagSearch()"></input><BR><BR><label>Search bibliography:<input type="text" id="bibQuery"></input><input type="button" value="submit" onclick="bibSearch()"></input>
+<BR><BR>
+<span id="results"></span></body>
+</html>
