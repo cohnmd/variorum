@@ -7,14 +7,7 @@
 		<script type="text/javascript">
         var resultPath = "container.php?fr=";
 
-        function listFragments() {
-
-
-
-        }
-
         function textSearch() {
-
             query = document.getElementById("textQuery").value.trim();
             if (query != "") {
                 document.getElementById("results").innerHTML = "Searching. . .";
@@ -46,6 +39,28 @@
                 document.getElementById("results").innerHTML = "Please enter a valid search term.";
             }
         }
+
+        function transSearch() {
+            query = document.getElementById("transQuery").value.trim();
+            if (query != "") {
+                document.getElementById("results").innerHTML = "Searching. . .";
+                results = searchTrans(query);
+                for (i = 0; i != results.length; i++) {
+                var resultLink = document.createElement('a');
+                resultLink.href = resultPath + results[i];
+                var displayString = results[i].split("fr");
+                displayString = displayString[0] + " fr. " + displayString[1];
+                resultLink.appendChild(document.createTextNode(displayString));
+                resultLink.appendChild(document.createElement('br'));
+                document.getElementById("results").appendChild(resultLink);
+            }
+            } else {
+                document.getElementById("results").innerHTML = "Please enter a valid search term.";
+            }
+        }
+
+
+
 
         function displayResults(results) {
             i = 0;
@@ -86,13 +101,23 @@
 	
 	<body>
 		<h3>Search the fragments:</h3>
-		<BR/>
+		<BR>
+		    <BR>
 		<label>Search the text of the fragments:
 			<input type="text" id="textQuery"></input>
 			<input type="button" value="submit" onclick="textSearch()"></input>(include the context of the fragment in search:
 			<input type="checkbox" id="contextBox" checked=true></input>)</label>
 		<BR>
 			<BR>
+			    <label>Search translations:
+			        <input type="text" id="transQuery"></input>
+			        <input type="button" value="submit" onclick="transSearch()"></input>
+			    </label>
+			    <BR>
+			        <BR>
+			            
+			    
+			    
 				<label>Search fragment tags:
 					<input type="text" id="tagQuery"></input>
 					<input type="button" value="submit" onclick="tagSearch()"></input>

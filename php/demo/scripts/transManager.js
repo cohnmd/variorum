@@ -9,8 +9,8 @@ function loadTrans(fragNumber) {
     fusionResponse = new XMLHttpRequest();
     fusionResponse.onreadystatechange = function () {
         if (fusionResponse.readyState == 4 && fusionResponse.status == 200) {
-            var test = JSON.parse(fusionResponse.responseText);
-            parent.contFrame.document.getElementById("trans").innerHTML = test.rows[0];
+            var parsedResult = JSON.parse(fusionResponse.responseText);
+            parent.contFrame.document.getElementById("trans").innerHTML = parsedResult.rows[0];
         }
     }
     fusionResponse.open("GET", query, true);

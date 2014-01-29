@@ -35,7 +35,7 @@ function searchTags(searchTerm) {
     fusionResponse.open("GET", query, false);
     fusionResponse.send(null);
     parsedResults = JSON.parse(fusionResponse.responseText);
-    i = 0;
+    var i = 0;
     while (i != parsedResults.rows.length) {
         results[i] = new result("kratesfr" + parsedResults.rows[i][0], parsedResults.rows[i][1]);
         i++;
@@ -48,7 +48,7 @@ function searchBib(searchTerm) {
     var key = "AIzaSyCblijNi4TBgM8rF6aaGurTGRrnhsgHxf0";
     var queryHeader = "https://www.googleapis.com/fusiontables/v1/query?sql=";
     var results = [];
-    query = queryHeader + "SELECT 'Number', 'Entry' FROM " + tableID + " WHERE 'Entry' CONTAINS '" + searchTerm + "' ORDER BY 'Number' ASC&key=" + key;
+    var query = queryHeader + "SELECT 'Number', 'Entry' FROM " + tableID + " WHERE 'Entry' CONTAINS '" + searchTerm + "' ORDER BY 'Number' ASC&key=" + key;
     var fusionResponse = null;
     fusionResponse = new XMLHttpRequest();
     fusionResponse.open("GET", query, false);
@@ -63,6 +63,21 @@ function searchBib(searchTerm) {
 
 }
 
-function searchTranslation(searchTerm) {
-
+function searchTrans(searchTerm) {
+    var tableID = "10nvdo3g6hAmj_oKpYJfrt3zRm2ez0693iXp_P6U";
+    var key = "AIzaSyCblijNi4TBgM8rF6aaGurTGRrnhsgHxf0";
+    var queryHeader = "https://www.googleapis.com/fusiontables/v1/query?sql=";
+    var results = [];
+    var query = queryHeader + "SELECT 'Number' FROM " + tableID + " WHERE 'Translation' CONTAINS '" + searchTerm + "' ORDER BY 'Number' ASC&key=" + key;
+    var fusionResponse = null;
+    fusionResponse = new XMLHttpRequest();
+    fusionResponse.open("GET", query, false);
+    fusionResponse.send(null);
+    parsedResults = JSON.parse(fusionResponse.responseText);
+    var i = 0;
+    while (i != parsedResults.rows.length) {
+        results[i] = new result("kratesfr" + parsedResults.rows[i]);
+        i++;
+    }
+    return results;
 }
