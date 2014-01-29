@@ -29,7 +29,8 @@ function searchTags(searchTerm) {
     var key = "AIzaSyCblijNi4TBgM8rF6aaGurTGRrnhsgHxf0";
     var queryHeader = "https://www.googleapis.com/fusiontables/v1/query?sql=";
     var results = [];
-    query = queryHeader + "SELECT 'Number', 'Tag' FROM " + tableID + " WHERE 'Tag' CONTAINS '" + searchTerm + "' ORDER BY 'Number' ASC&key=" + key;
+    searchTerm = searchTerm.toLowerCase();
+    query = queryHeader + "SELECT 'Number', 'Tag' FROM " + tableID + " WHERE 'Tag' CONTAINS IGNORING CASE '" + searchTerm + "' ORDER BY 'Number' ASC&key=" + key;
     var fusionResponse = null;
     fusionResponse = new XMLHttpRequest();
     fusionResponse.open("GET", query, false);
@@ -52,8 +53,9 @@ function searchBib(searchTerm) {
     var key = "AIzaSyCblijNi4TBgM8rF6aaGurTGRrnhsgHxf0";
     var queryHeader = "https://www.googleapis.com/fusiontables/v1/query?sql=";
     var results = [];
-    var query = queryHeader + "SELECT 'Number', 'Entry' FROM " + tableID + " WHERE 'Entry' CONTAINS '" + searchTerm + "' ORDER BY 'Number' ASC&key=" + key;
+    var query = queryHeader + "SELECT 'Number', 'Entry' FROM " + tableID + " WHERE 'Entry' CONTAINS IGNORING CASE '" + searchTerm + "' ORDER BY 'Number' ASC&key=" + key;
     var fusionResponse = null;
+    searchTerm = searchTerm.toLowerCase();
     fusionResponse = new XMLHttpRequest();
     fusionResponse.open("GET", query, false);
     fusionResponse.send(null);
@@ -76,8 +78,9 @@ function searchTrans(searchTerm) {
     var key = "AIzaSyCblijNi4TBgM8rF6aaGurTGRrnhsgHxf0";
     var queryHeader = "https://www.googleapis.com/fusiontables/v1/query?sql=";
     var results = [];
-    var query = queryHeader + "SELECT 'Number' FROM " + tableID + " WHERE 'Translation' CONTAINS '" + searchTerm + "' ORDER BY 'Number' ASC&key=" + key;
+    var query = queryHeader + "SELECT 'Number' FROM " + tableID + " WHERE 'Translation' CONTAINS IGNORING CASE '" + searchTerm + "' ORDER BY 'Number' ASC&key=" + key;
     var fusionResponse = null;
+    searchTerm = searchTerm.toLowerCase();
     fusionResponse = new XMLHttpRequest();
     fusionResponse.open("GET", query, false);
     fusionResponse.send(null);
