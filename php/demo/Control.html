@@ -1,130 +1,142 @@
-<html>    
-<head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-        
-        
-<style>
-#tabs ul {
-padding: 0px;
-margin: 0px;
-margin-left: 10px;
-list-style-type: none;
-}
-
-#tabs ul li {
-display: inline-block;
-clear: none;
-float: left;
-margin-bottom: 5;
-height: 24px;
-}
-
-#tabs ul li a {
-position: relative;
-margin-top: 16px;
-display: block;
-margin-left: 6px;
-line-height: 24px;
-padding-left: 10px;
-padding-right: 5px;
-background: #f6f6f6;
-z-index: 9999;
-border: 1px solid #ccc;
-border-bottom: 0px;
-border-top-left-radius: 4px;
-border-top-right-radius: 4px;
-color: #000000;
-text-decoration: none;
-font-weight: bold;
-}
-
-#tabs ul li a:hover {
-text-decoration: underline;
-cursor: pointer;
-}
-
-#tabs #Content_Area {
-padding: 0 15px;
-clear:both;
-line-height:19px;
-position: relative;
-top: 20px;
-z-index: 5;
-
-}
-
-.box {
-  padding: 2px;
-  line-height: 1.5em;
-  border: 1px solid gray ;
-}
-
-.active {
-        text-decoration: underline;
-        
-}
-
-p { padding-left: 15px; }
-</style>
+<html>
     
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
         
-<script type="text/javascript">   
-function tab(tab) {
-var i=0;
-var tabCount=4;
-while (i!=tabCount) {
-    tabName = "tab" + i;
-    document.getElementById(tabName).style.display = 'none';
-    tabName = "li_tab" + i;
-    document.getElementById(tabName).setAttribute("class", "");
-    i++;
-}
+        
+        <style>
+        #tabs ul {
+            padding: 0px;
+            margin: 0px;
+            margin-left: 10px;
+            list-style-type: none;
+        }
+        #tabs ul li {
+            display: inline-block;
+            clear: none;
+            float: left;
+            margin-bottom: 5;
+            height: 24px;
+        }
+        #tabs ul li a {
+            position: relative;
+            margin-top: 16px;
+            display: block;
+            margin-left: 6px;
+            line-height: 24px;
+            padding-left: 10px;
+            padding-right: 5px;
+            background: #f6f6f6;
+            z-index: 9999;
+            border: 1px solid #ccc;
+            border-bottom: 0px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #tabs ul li a:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        #tabs #Content_Area {
+            padding: 0 15px;
+            clear: both;
+            line-height: 19px;
+            position: relative;
+            top: 20px;
+            z-index: 5;
+        }
+        .box {
+            padding: 2px;
+            line-height: 1.5em;
+            border: 1px solid gray;
+        }
+        .active {
+            text-decoration: underline;
+        }
+        p {
+            padding-left: 15px;
+        }
+    </style>
+        
+        
+        <script type="text/javascript">
+        function tab(tab) {
+            var i = 0;
+            var tabCount = 4;
+            while (i != tabCount) {
+                tabName = "tab" + i;
+                document.getElementById(tabName).style.display = 'none';
+                tabName = "li_tab" + i;
+                document.getElementById(tabName).setAttribute("class", "");
+                i++;
+            }
 
-document.getElementById(tab).style.display = 'block';
-document.getElementById('li_'+tab).setAttribute("class", "active");
-}
-</script>
-
-</head>
+            document.getElementById(tab).style.display = 'block';
+            document.getElementById('li_' + tab).setAttribute("class", "active");
+        }
+    </script>
+        
+    </head>
     
-    <body>        
+    <body>
         <div id="tabs">
             <ul>
-                <li id="li_tab0" class="active" onclick="tab('tab0')"><a>Fragment Information</a></li>
-                <li id="li_tab1" onclick="tab('tab1')"><a>Apparatus Toolkit</a></li>
-                <li id="li_tab2" onclick="tab('tab2')"><a>Translation</a></li>
-                <li id="li_tab3" onclick="tab('tab3')"><a>Bibliography</a></li>
+                <li id="li_tab0" class="active" onclick="tab('tab0')"><a>Fragment Information</a>
+                </li>
+                <li id="li_tab1" onclick="tab('tab1')"><a>Apparatus Toolkit</a>
+                </li>
+                <li id="li_tab2" onclick="tab('tab2')"><a>Translation</a>
+                </li>
+                <li id="li_tab3" onclick="tab('tab3')"><a>Bibliography</a>
+                </li>
             </ul>
             <div id="Content_Area">
                 <div id="tab0">
-                  <center>Fragment Information</center>
-                  <p>
-                      Title: <span class="box"><span id="fragment"></span></span><BR></BR>
-                      Play Name: <span class="box"><span id="playName"></span></span><BR></BR>
-                      Source: <span class="box"><span id="source"></span></span><BR></BR>
-                      Build Information: <span class="box"><span id="buildInfo"></span></span><BR></BR>
-                      Tags: <span class="box"><span id="tags"></span></span><BR></BR>
-                      <span id="addTag"></span><BR></BR>
-                      <span id="contextManager"></span>
-                  </p>
+                    <center>Fragment Information</center>
+                    <p>
+                        Title: <span class="box"><span id="fragment"></span></span>
+                        <BR></BR>
+                        Play Name: <span class="box"><span id="playName"></span></span>
+                        <BR></BR>
+                        Source: <span class="box"><span id="source"></span></span>
+                        <BR></BR>
+                        Build Information: <span class="box"><span id="buildInfo"></span></span>
+                        <BR></BR>
+                        Tags: <span class="box"><span id="tags"></span></span>
+                        <BR></BR>
+                        <span id="addTag"></span>
+                        <BR></BR>
+                        <span id="contextManager"></span>
+                    </p>
                 </div>
                 
-                <div id="tab1"  style="display: none;">
-                    <center>Editors and their Emmendations (see bibliography for their editions):<BR/></center>
+                <div id="tab1" style="display: none;">
+                    <center>Editors and their Emmendations (see bibliography for their editions):
+                        <BR/>
+                    </center>
                     <span id="wit">
                     </span>
                     <BR>
-                        <label>Highlight All Cruces <input type="checkbox" value="1" onclick="parent.textFrame.highlightCruces(this)"/></label>
+                        <label>Highlight All Cruces
+                            <input type="checkbox" value="1" onclick="parent.textFrame.highlightCruces(this)" />
+                        </label>
                 </div>
                 
                 <div id="tab2" style="display: none;">
-                    <center>Translation</center>(NB: This is a translation of the base text and does not include any emendations or alternate readings)<BR><BR>
-                    <BR><span class="box"><span id="trans"></span></span>
+                    <center>Translation</center>(NB: This is a translation of the base text and does not include any emendations or alternate readings)
+                    <BR>
+                        <BR>
+                            <BR><span class="box"><span id="trans"></span></span>
                 </div>
                 <div id="tab3" style="display: none;">
                     <center>Bibliography</center>
-                    <BR><BR><span id="bib"></span>
+                    <BR>
+                        <BR><span id="bib"></span>
+                </div>
             </div>
-        </div>
     </body>
+    
 </html>

@@ -1,4 +1,5 @@
 <?php
+error_reporting(0); 
 $fragmentsPath = "../fragments/transformedFragments/";
 $fragmentsList = array();
 $dirContents = scandir($fragmentsPath);
