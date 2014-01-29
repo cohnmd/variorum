@@ -102,7 +102,7 @@ function addTag() {
 
 function manageContext() {
     var preText = "";
-    index = 0;
+    var index = 0;
     while (index < document.getElementById("sourceText").childNodes.length) {
         var node = document.getElementById("sourceText").childNodes[index];
         if (node.nodeName == "#text" && node.nodeValue != "") {
@@ -118,12 +118,13 @@ function manageContext() {
 
 
     var postText = "";
-    var k = document.getElementById("fragment");
+    var node = document.getElementById("fragment").nextSibling;
     while (k != null) {
         if (node.nodeName == "#text" && node.nodeValue != "") {
-            postText = k.nodeValue;
+            postText = node.nodeValue;
+            break;
         }
-        k = k.nextSibling;
+        node = node.nextSibling;
     }
 
     postTextTagged = "<span id='postContext'>" + postText + "</span>"
