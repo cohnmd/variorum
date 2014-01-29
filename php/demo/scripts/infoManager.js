@@ -1,6 +1,5 @@
 var fragNumber;
 var oldTag = "";
-var path = "/demo/scripts";
 
 function regFragment(fragment) {
     parent.contFrame.document.getElementById("fragment").innerHTML = fragment;
@@ -81,7 +80,7 @@ function addTag() {
             parent.contFrame.document.getElementById("tagButton").disabled = true;
             parent.contFrame.document.getElementById("newTag").value = "Adding tag. . .";
             phpHook = new XMLHttpRequest();
-            query = "path + /tableManager.php?num=" + fragNumber + "&tag=" + "'" + newTag + "'";
+            query = "http://" + document.location.hostname + "/demo/scripts/tableManager.php?num=" + fragNumber + "&tag=" + "'" + newTag + "'";
             phpHook.onreadystatechange = function () {
                 if (phpHook.readyState == 4 && phpHook.status == 200) {
                     parent.contFrame.document.getElementById("tagButton").disabled = false;
