@@ -18,8 +18,9 @@ function searchFragText(searchTerm, includeCon) {
 
     searchResponse.open("GET", query, false);
     searchResponse.send();
-    
-    return JSON.parse(searchResponse.responseText);
+	resultList = JSON.parse(searchResponse.responseText);
+	if (resultList.length==0) { return 0; }
+	else { return resultList; }
 }
 
 
