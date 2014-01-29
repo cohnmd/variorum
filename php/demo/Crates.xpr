@@ -251,6 +251,7 @@
         <file name="scripts/bibManager.js"/>
         <file name="container.php"/>
         <file name="Control.html"/>
+        <file name="scripts/fragmentList.php"/>
         <file name="scripts/fragmentSearch.php"/>
         <file name="scripts/infoManager.js"/>
         <file name="fragments/encodedFragments/kratesfr1.xml"/>
