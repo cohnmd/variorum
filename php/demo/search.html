@@ -11,7 +11,7 @@
             query = document.getElementById("textQuery").value.trim();
             if (query != "") {
                 document.getElementById("results").innerHTML = "Searching. . .";
-                results = searchFragText(query, document.getElementById("contextBox").checked);
+                var results = searchFragText(query, document.getElementById("contextBox").checked);
                 displayResults(results);
             } else {
                 document.getElementById("results").innerHTML = "Please enter a valid search term.";
@@ -22,8 +22,11 @@
             query = document.getElementById("tagQuery").value.trim();
             if (query != "") {
                 document.getElementById("results").innerHTML = "Searching. . .";
-                results = searchTags(query);
-                displayResults(results);
+                var results = searchTags(query);
+                
+                if (results==0) { document.getElementById("results").innerHTML = "No results."; }
+                else {
+                displayResults(results); }
             } else {
                 document.getElementById("results").innerHTML = "Please enter a valid search term.";
             }
@@ -33,8 +36,9 @@
             query = document.getElementById("bibQuery").value.trim();
             if (query != "") {
                 document.getElementById("results").innerHTML = "Searching. . .";
-                results = searchBib(query);
-                displayResults(results);
+                var results = searchBib(query);
+                if (results==0) { document.getElementById("results").innerHTML = "No results."; }
+                else { displayResults(results); }
             } else {
                 document.getElementById("results").innerHTML = "Please enter a valid search term.";
             }
@@ -44,16 +48,22 @@
             query = document.getElementById("transQuery").value.trim();
             if (query != "") {
                 document.getElementById("results").innerHTML = "Searching. . .";
-                results = searchTrans(query);
+                var results = searchTrans(query);
+                if (results==0) {
+                document.getElementById("results").innerHTML = "No results.";
+                }
+                else {
+                document.getElementById("results").innerHTML = "";
                 for (i = 0; i != results.length; i++) {
+                console.log(results[i]);
                 var resultLink = document.createElement('a');
                 resultLink.href = resultPath + results[i];
                 var displayString = results[i].split("fr");
                 displayString = displayString[0] + " fr. " + displayString[1];
                 resultLink.appendChild(document.createTextNode(displayString));
                 resultLink.appendChild(document.createElement('br'));
-                document.getElementById("results").appendChild(resultLink);
-            }
+                document.getElementById("results").appendChild(resultLink);   }
+            } 
             } else {
                 document.getElementById("results").innerHTML = "Please enter a valid search term.";
             }

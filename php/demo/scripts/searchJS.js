@@ -7,7 +7,6 @@ function result(loc, hit) {
 
 function searchFragText(searchTerm, includeCon) {
     query = path + "/fragmentSearch.php?q=" + searchTerm + "&con=" + includeCon;
-    console.log(query);
     var searchResponse = new XMLHttpRequest();
     /*searchResponse.onreadystatechange= function() {
 	        if (searchResponse.readyState==4 && searchResponse.status==200) {
@@ -19,8 +18,8 @@ function searchFragText(searchTerm, includeCon) {
 
     searchResponse.open("GET", query, false);
     searchResponse.send();
+    
     return JSON.parse(searchResponse.responseText);
-
 }
 
 
@@ -34,12 +33,16 @@ function searchTags(searchTerm) {
     fusionResponse = new XMLHttpRequest();
     fusionResponse.open("GET", query, false);
     fusionResponse.send(null);
-    parsedResults = JSON.parse(fusionResponse.responseText);
+    var parsedResults = JSON.parse(fusionResponse.responseText);
     var i = 0;
+    if (parsedResults.rows==null) {
+        return 0;
+    }
+    else {
     while (i != parsedResults.rows.length) {
         results[i] = new result("kratesfr" + parsedResults.rows[i][0], parsedResults.rows[i][1]);
         i++;
-    }
+    } }
     return results;
 }
 
@@ -53,14 +56,18 @@ function searchBib(searchTerm) {
     fusionResponse = new XMLHttpRequest();
     fusionResponse.open("GET", query, false);
     fusionResponse.send(null);
-    parsedResults = JSON.parse(fusionResponse.responseText);
-    i = 0;
+    var parsedResults = JSON.parse(fusionResponse.responseText);
+    var i = 0;
+    if (parsedResults.rows==null) {
+        return 0;
+    }
+    else {
     while (i != parsedResults.rows.length) {
         results[i] = new result("kratesfr" + parsedResults.rows[i][0], parsedResults.rows[i][1]);
         i++;
     }
     return results;
-
+    }
 }
 
 function searchTrans(searchTerm) {
@@ -73,11 +80,15 @@ function searchTrans(searchTerm) {
     fusionResponse = new XMLHttpRequest();
     fusionResponse.open("GET", query, false);
     fusionResponse.send(null);
-    parsedResults = JSON.parse(fusionResponse.responseText);
+    var parsedResults = JSON.parse(fusionResponse.responseText);
     var i = 0;
+    if (parsedResults.rows==null) {
+        return 0;
+    }
+    else {
     while (i != parsedResults.rows.length) {
-        results[i] = new result("kratesfr" + parsedResults.rows[i]);
+        results[i] = "kratesfr" + parsedResults.rows[i];
         i++;
     }
     return results;
-}
+}}
