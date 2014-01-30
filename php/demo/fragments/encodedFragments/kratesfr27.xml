@@ -40,7 +40,7 @@
          <div1 type="comedy" xml:id="Samioi">
             <div2 type="sourceText" xml:id="Athenaeus 3.117B">
                <p>παρέλιπεν δ’ ὁ τένθης Ἀρχέστρατος συγκαταλέξαι ἡμῖν καὶ τὸ παρὰ Κράτητι τῷ κωμῳδιοποιῷ ἐν Σαμίοις λεγόμενον ἐλεφάντινον τάριχος, περὶ οὗ φησιν·
-                  <div3 type="frag" xml:id="1">
+                  <div3 type="frag" xml:id="27">
                      <lg>
                         <l n="1">σκυτίνῃ ποτ’ ἐν χύτρᾳ τάριχος ἐλεφάντινον</l>
                         <l n="2">
@@ -53,7 +53,9 @@
                               <app>
                                  <lem wit="#Athenaeus">†υσοριμαχειν†</lem>
                               <rdg wit="#Mette">
-                                 ὗς ὁρεῖ• † μαχειν</rdg></app>
+                                 ὗς ὁρεῖ· † μαχειν</rdg></app>
+                                 
+                                 
                                  ἄνδρες οὐρανοῦ καττύματα</l>
                               <l n="5">
                                  παῖ’ ἐκεῖνον, <app><lem wit="#Dindord">ἄγχ’ ἐκεῖνον</lem><rdg wit="#Athenaeus A">ἄγχε κεῖνον</rdg></app>. <app><lem wit="#Porson">ἐν Κέῳ</lem><rdg wit="#Athenaeus A">ἐγκαιῶ</rdg></app> τίς ἡμέρα
