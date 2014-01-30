@@ -9,21 +9,22 @@
             <title>Krates fr. 1 K.-A.</title>
          </titleStmt>
          <publicationStmt>
-            <p>Generated for testing purposes on 8/26/2013</p>
+            <p>Generated on 1/30/2014</p>
          </publicationStmt>
          <sourceDesc>
-            <p>Adapted from K.-A.</p>
+            <p>Adapted from K.-A. and other sources</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <editorialDecl>
-            <p>A test document using selected items from the app crit to Krates fr. 1 K-A</p>
+            <p>Based on K.-A., Bonanno, and others</p>
          </editorialDecl>
          <variantEncoding method="parallel-segmentation" location="internal"/>
          <listWit>
             <witness xml:id="Athenaeus">Athenaeus of Naucratis</witness>
-            <editor xml:id="Kock">Johnny Kock</editor>
-            <editor xml:id="Jacobs">Gillian Jacobs</editor>
+            <editor xml:id="Kock">Kock</editor>
+            <editor xml:id="Jacobs">Jacobs</editor>
+            <editor xml:id="Bonanno">Bonanno</editor>            
          </listWit>
       </encodingDesc>
 
@@ -32,24 +33,28 @@
    <text>
       <body> 
          <div1 type="comedy" xml:id="Geitones">
-            <div2 type="sourceText" xml:id="Athenaeus x.xxx">
-               <p>Context 1 2 3 
+            <div2 type="sourceText" xml:id="Athenaeus 9.396D">
+               <p>Ἡρόδοτος δ’ ἐν τῇ πρώτῃ φησὶν ὅτι ἐν Βαβυλῶνι ἐπὶ τοῦ χρυσοῦ βωμοῦ οὐκ ἔξεστι θύειν ὅτι μὴ γαλαθηνὰ μοῦνα ... Κράτης Γείτοσι·
                <div3 type="frag" xml:id="1">
                <lg>
                   <l n="1">νῦν μὲν γὰρ ἡμῖν <app>
                         <lem wit="#Athenaeus">παιδικῶν</lem> <rdg wit="#Kock">περδίκων</rdg>
-                     </app> TEST TEST
+                     </app>
                      <app>
                         <lem wit="#Athenaeus">δαίς</lem>
                         <rdg wit="#Jacobs">ἅλις</rdg>
+                        <rdg wit="#Bonanno">θάλεια δαίς</rdg>
                      </app>
-                     <app><rdg wit="#Jacobs">JACOBS READINGREADING</rdg>
-                        <rdg wit="#Kock">KOCK READING</rdg></app>
                   </l>
-                  <l n="2">SECOND <app><rdg wit="Con">LINE</rdg><rdg wit="Cohn">LONG</rdg></app> OF TEXT</l>
+                    <l n="2">
+                       ὅκωσπερ ἀρνῶν ἐστι γαλαθηνῶν τε καὶ
+                    </l>
+                     <l n="3">
+                        χοίρων
+                     </l>  
                </lg>
             </div3>
-              context 4 5 6 </p>
+              </p>
             </div2>
    
          </div1>
