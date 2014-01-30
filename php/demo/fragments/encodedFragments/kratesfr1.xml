@@ -6,22 +6,22 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Krates fr. 1 K.-A.</title>
+            <title>Krates fr. 1</title>
          </titleStmt>
          <publicationStmt>
             <p>Generated on 1/30/2014</p>
          </publicationStmt>
          <sourceDesc>
-            <p>Adapted from K.-A. and other sources</p>
+            <p>Based on K.-A., Bonanno, and others</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <editorialDecl>
-            <p>Based on K.-A., Bonanno, and others</p>
+            <p></p>
          </editorialDecl>
          <variantEncoding method="parallel-segmentation" location="internal"/>
          <listWit>
-            <witness xml:id="Athenaeus">Athenaeus of Naucratis</witness>
+            <witness xml:id="Athenaeus">Athenaeus</witness>
             <editor xml:id="Kock">Kock</editor>
             <editor xml:id="Jacobs">Jacobs</editor>
             <editor xml:id="Bonanno">Bonanno</editor>            

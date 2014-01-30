@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Krates fr. 27</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Generated on 1/30/2014</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Based on K.-A., Bonanno, and others</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <p></p>
+         </editorialDecl>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+         <listWit>
+            <witness xml:id="Athenaeus">#Athenaeus of Naucratis</witness>
+            <editor xml:id="CE">#Athenaeus CE</editor>
+            <editor xml:id="A">#Athenaeus A</editor>
+            <editor xml:id="Erfudt">#Erfudt
+               <editor xml:id="Kock">#Kock</editor>
+               <editor xml:id="Mette">#Mette</editor>
+               <editor xml:id="Porson">#Porson</editor>
+               <editor xml:id="Srebrny">#Srebrny</editor>
+            </editor>            
+         </listWit>
+      </encodingDesc>
+      
+   </teiHeader>
+   
+   <text>
+      <body> 
+         <div1 type="comedy" xml:id="Samioi">
+            <div2 type="sourceText" xml:id="Athenaeus 3.117B">
+               <p>παρέλιπεν δ’ ὁ τένθης Ἀρχέστρατος συγκαταλέξαι ἡμῖν καὶ τὸ παρὰ Κράτητι τῷ κωμῳδιοποιῷ ἐν Σαμίοις λεγόμενον ἐλεφάντινον τάριχος, περὶ οὗ φησιν·
+                  <div3 type="frag" xml:id="1">
+                     <lg>
+                        <l n="1">σκυτίνῃ ποτ’ ἐν χύτρᾳ τάριχος ἐλεφάντινον</l>
+                        <l n="2">
+                           ἧψε <app><lem wit="#Athenaeus A">ποντιὰς χελώνη</lem><rdg wit="#Athenaeus CE">ποντία χελώνη</rdg><rdg wit="#Erfurdt">ποντίας χελώνης</rdg></app>
+                           πευκίνοισι <app><lem wit="#Athenaeus">κύμασι</lem><rdg wit="#Kock">καύμασιν</rdg></app>,</l>
+                              <l n="3">
+                              καρκίνοι ποδάνεμοί τε καὶ τανύπτεροι λύκοι
+                              </l>
+                              <l n="4">
+                              <app>
+                                 <lem wit="#Athenaeus">†υσοριμαχειν†</lem>
+                              <rdg wit="#Mette">
+                                 ὗς ὁρεῖ• † μαχειν</rdg></app>
+                                 ἄνδρες οὐρανοῦ καττύματα</l>
+                              <l n="5">
+                                 παῖ’ ἐκεῖνον, <app><lem wit="#Dindord">ἄγχ’ ἐκεῖνον</lem><rdg wit="#Athenaeus A">ἄγχε κεῖνον</rdg></app>. <app><lem wit="#Porson">ἐν Κέῳ</lem><rdg wit="#Athenaeus A">ἐγκαιῶ</rdg></app> τίς ἡμέρα
+                                 
+                              </l>
+                     </lg>
+                  </div3>
+               </p>
+            </div2>
+            
+         </div1>
+         
+      </body>
+   </text>
+</TEI>   

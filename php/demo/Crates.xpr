@@ -10,6 +10,21 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>fragments/encodedFragments/kratesfr2.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>fragmentTransform</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>fragments/encodedFragments/kratesfr1.xml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -255,6 +270,7 @@
         <file name="scripts/fragmentSearch.php"/>
         <file name="scripts/infoManager.js"/>
         <file name="fragments/encodedFragments/kratesfr1.xml"/>
+        <file name="fragments/encodedFragments/kratesfr2.xml"/>
         <file name="search.html"/>
         <file name="scripts/searchJS.js"/>
         <file name="scripts/tableManager.php"/>
