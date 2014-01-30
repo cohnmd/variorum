@@ -31,6 +31,7 @@ function loadTags(fragNumber) {
             var tagList = JSON.parse(fusionResponse.responseText);
             tags = "";
             n = 0;
+            if (tagList.rows.length==0) {             parent.contFrame.document.getElementById("tags").innerHTML = ""; }
             while (n != tagList.rows.length) {
 
                 if (n != 0) {
