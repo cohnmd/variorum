@@ -37,6 +37,7 @@ function loadApp() {
             appIndex = entries[n].position;
             appHeader = parent.contFrame.document.createElement("span");
             appHeader.setAttribute("id", entries[n].position);
+            appHeader.appendChild(parent.contFrame.document.createElement("BR"));
             defaultFlag = 0;
         }
 
