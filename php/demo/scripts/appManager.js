@@ -33,13 +33,10 @@ function loadApp() {
                 lineIndex = entries[n].line;
                 parent.contFrame.document.getElementById("wit").appendChild(lineHeader);
             }
-
             appCount++;
             appIndex = entries[n].position;
             appHeader = parent.contFrame.document.createElement("span");
             appHeader.setAttribute("id", entries[n].position);
-            appHeader.innerHTML = "<BR>Crux " + appTitle + "<BR>";
-            appTitle = appTitle + 1;
             defaultFlag = 0;
         }
 

@@ -10,7 +10,9 @@ function loadTrans(fragNumber) {
     fusionResponse.onreadystatechange = function () {
         if (fusionResponse.readyState == 4 && fusionResponse.status == 200) {
             var parsedResult = JSON.parse(fusionResponse.responseText);
-            parent.contFrame.document.getElementById("trans").innerHTML = parsedResult.rows[0];
+            if (parsedResult.rows!=null) {
+            parent.contFrame.document.getElementById("trans").innerHTML = parsedResult.rows[0]; }
+            else { parent.contFrame.document.getElementById("trans").innerHTML = "No translation found."; }
         }
     }
     fusionResponse.open("GET", query, true);

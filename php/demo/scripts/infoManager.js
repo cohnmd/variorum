@@ -31,8 +31,8 @@ function loadTags(fragNumber) {
             var tagList = JSON.parse(fusionResponse.responseText);
             tags = "";
             n = 0;
-            if (tagList.rows.length==0) {             parent.contFrame.document.getElementById("tags").innerHTML = ""; }
-            while (n != tagList.rows.length) {
+	if (tagList.rows!=null) {
+	    while (n != tagList.rows.length) {
 
                 if (n != 0) {
                     tags = tags + "; "
@@ -40,8 +40,9 @@ function loadTags(fragNumber) {
                 tags = tags + tagList.rows[n]
                 n++;
             }
+	}
             parent.contFrame.document.getElementById("tags").innerHTML = tags;
-
+	
             tagEntry();
         }
     }

@@ -9,7 +9,7 @@ function loadBib(fragNumber) {
     fusionResponse.onreadystatechange = function () {
         if (fusionResponse.readyState == 4 && fusionResponse.status == 200) {
             parent.contFrame.document.getElementById("bib").innerHTML = "";
-            genBib(fusionResponse.responseText);
+            if (fusionResponse.responseText!=null) { genBib(fusionResponse.responseText); }
         }
     }
     fusionResponse.open("GET", query, true);
@@ -40,7 +40,7 @@ function genBib(responseText) {
         index++;
     }
 
-    parent.contFrame.document.getElementById("bib").appendChild(editionsContainer);
+//    parent.contFrame.document.getElementById("bib").appendChild(editionsContainer);
     parent.contFrame.document.getElementById("bib").appendChild(translationsContainer);
     parent.contFrame.document.getElementById("bib").appendChild(miscContainer);
 }
