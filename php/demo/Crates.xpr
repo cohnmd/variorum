@@ -283,6 +283,7 @@
         <file name="Control.html"/>
         <file name="scripts/fragmentList.php"/>
         <file name="scripts/fragmentSearch.php"/>
+        <file name="../index.html"/>
         <file name="scripts/infoManager.js"/>
         <file name="fragments/encodedFragments/kratesfr1.xml"/>
         <file name="fragments/encodedFragments/kratesfr27.xml"/>

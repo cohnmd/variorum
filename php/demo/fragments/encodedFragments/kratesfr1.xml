@@ -25,6 +25,7 @@
             <editor xml:id="Kock">Kock</editor>
             <editor xml:id="Jacobs">Jacobs</editor>
             <editor xml:id="Bonanno">Bonanno</editor>            
+            <editor xml:id="Peppink">Peppink</editor>            
          </listWit>
       </encodingDesc>
 
@@ -47,7 +48,9 @@
                      </app>
                   </l>
                     <l n="2">
-                       ὅκωσπερ ἀρνῶν ἐστι γαλαθηνῶν τε καὶ
+                    <app><lem wit="#Athenaeus">ὅκωσπερ</lem>
+                       <rdg wit="#Peppink">οικωσπερ</rdg>
+                       </app> ἀρνῶν ἐστι γαλαθηνῶν τε καὶ
                     </l>
                      <l n="3">
                         χοίρων
