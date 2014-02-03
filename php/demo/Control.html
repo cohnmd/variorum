@@ -6,8 +6,8 @@
         
         <style>
         #tabs ul {
-            padding: 0px;
-            margin: 0px;
+            padding: 1px;
+            margin: 1px;
             margin-left: 10px;
             list-style-type: none;
         }
@@ -41,7 +41,7 @@
             cursor: pointer;
         }
         #tabs #Content_Area {
-            padding: 0 15px;
+            padding: 15px;
             clear: both;
             line-height: 19px;
             position: relative;
@@ -49,7 +49,7 @@
             z-index: 5;
         }
         .box {
-            padding: 2px;
+            padding: 1px;
             line-height: 1.5em;
             border: 1px solid gray;
         }
@@ -94,7 +94,7 @@
             
             else {
             document.getElementsByName("submitButton").disabled=true;
-            query = path + "infoSubmit.php?sug=" + suggestion + "&code=" + code;
+            query = path + "suggestionSubmit.php?sug=" + suggestion + "&code=" + code;
             var phpHook = new XMLHttpRequest();
             phpHook.onreadystatechange = function () {
                 if (phpHook.readyState == 4 && phpHook.status == 200) {
