@@ -19,7 +19,10 @@ function regBuildInfo(buildInfo) {
 }
 
 function loadTags(fragNumber) {
+	parent.addEventListener("load", function() { 
     parent.contFrame.document.getElementById("tags").innerHTML = "Loading. . ."
+	            
+
     this.fragNumber = fragNumber;
     var tableID = "1zaUYJa9cPl90Buj5l8QsmJwyEBKRDWJtGuMwrHg";
     var key = "AIzaSyCblijNi4TBgM8rF6aaGurTGRrnhsgHxf0";
@@ -41,14 +44,15 @@ function loadTags(fragNumber) {
                 n++;
             }
 	}
-            parent.addEventListener("load", function() { parent.contFrame.document.getElementById("tags").innerHTML = tags; tagEntry(); }, false); 
-            
+	            parent.contFrame.document.getElementById("tags").innerHTML = tags;
+            tagEntry();	
         }
     }
     fusionResponse.open("GET", query, true);
     fusionResponse.send();
 
 
+}, false);
 }
 
 function tagEntry() {

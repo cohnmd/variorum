@@ -49,10 +49,12 @@
             z-index: 5;
         }
         .box {
+		
             padding: 1px;
             line-height: 1.5em;
             border: 1px solid gray;
         }
+
         .active {
             text-decoration: underline;
         }
@@ -137,7 +139,7 @@
                         <BR></BR>
                         Build Information: <span class="box"><span id="buildInfo"></span></span>
                         <BR></BR>
-                        Tags: <span class="box"><span id="tags"></span></span>
+                        <table><tr style="vertical-align:top;"><td>Tags:</td><td><div class="box" id="tags"></div></td></tr></table>
                         <BR></BR>
                         <span id="addTag"></span>
                         <BR></BR>
@@ -146,7 +148,7 @@
                 </div>
                 
                 <div id="tab1" style="display: none;">
-                    <center>Editors and their Emmendations
+                    <center>Editors and their Emmendations:
                         <BR/>
                     </center>
                     <span id="wit">
@@ -161,6 +163,8 @@
                 
                 <div id="tab2" style="display: none;">
                     <center>Translation</center>
+                    
+                    <BR>
                         <BR><span id="trans"></span>
                 </div>
                 <div id="tab3" style="display: none;">
