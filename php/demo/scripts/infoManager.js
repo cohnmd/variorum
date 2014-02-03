@@ -2,20 +2,20 @@ var fragNumber;
 var oldTag = "";
 
 function regFragment(fragment) {
-    parent.contFrame.document.onload = function() { parent.contFrame.document.getElementById("fragment").innerHTML = fragment; }
+    parent.addEventListener("load", function() { parent.contFrame.document.getElementById("fragment").innerHTML = fragment; }, false); 
     parent.title = fragment;
 }
 
 function regPlayName(playName) {
-    parent.contFrame.document.onload = function() { parent.contFrame.document.getElementById("playName").innerHTML = "<i>" + playName + "</i>"; }
+        parent.addEventListener("load", function() { parent.contFrame.document.getElementById("playName").innerHTML = "<i>" + playName + "</i>"; }, false);
 }
 
 function regSource(source) {
-    parent.contFrame.document.onload = function() { parent.contFrame.document.getElementById("source").innerHTML = source; }
+        parent.addEventListener("load", function() { parent.contFrame.document.getElementById("source").innerHTML = source; }, false);
 }
 
 function regBuildInfo(buildInfo) {
-    parent.contFrame.document.onload = function() { parent.contFrame.document.getElementById("buildInfo").innerHTML = buildInfo; }
+        parent.addEventListener("load", function() { parent.contFrame.document.getElementById("buildInfo").innerHTML = buildInfo; }, false);
 }
 
 function loadTags(fragNumber) {

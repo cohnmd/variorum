@@ -12,10 +12,7 @@
             </body>
             
             <script type="text/javascript">               
-                parent.contFrame.document.onload = function() {    
-            loadApp();
-            manageContext();
-            }
+            parent.addEventListener("load", function () { loadApp(); manageContext(); }, false);
             </script>
         </HTML>    
     </xsl:template>
