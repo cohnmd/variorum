@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Krates fr. 16</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Generated on 2/3/2014</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Based on K.-A., Bonanno, and others</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p></p>
+            </editorialDecl>
+            <variantEncoding method="parallel-segmentation" location="internal"/>
+            <listWit>
+                <witness xml:id="E">Athenaeus E</witness>
+                <editor xml:id="C">#Athenaeus C</editor>
+                <editor xml:id="A">#Athenaeus A</editor>
+                <editor xml:id="Erfudt">#Erfudt
+                    <editor xml:id="Kock">#Kock</editor>
+                    <editor xml:id="Mette">#Mette</editor>
+                    <editor xml:id="Porson">#Porson</editor>
+                    <editor xml:id="Srebrny">#Srebrny</editor>
+                </editor>            
+            </listWit>
+        </encodingDesc>
+        
+    </teiHeader>
+    
+    <text>
+        <body> 
+            <div1 type="comedy" xml:id="Theria">
+                <div2 type="sourceText" xml:id="Athenaeus 6.267E">
+                    <p>οἱ δὲ τῆς ἀρχαίας κωμῳδίας ποιηταὶ περὶ τοῦ ἀρχαίου βίου διαλεγόμενοι ὅτι οὐκ ἦν τότε δούλων  χρεία τοιάδε ἐκτίθενται … Κράτης δ’ ἐν Θηρίοις·
+                        <div3 type="frag" xml:id="16">
+                            <lg>
+                                <l n="1">A. ἔπειτα δοῦλον οὐδὲ εἷς κεκτήσετ’ οὐδὲ δούλην,</l>
+                                <l n="2">
+                                    ἀλλ’ αὐτὸς αὑτῷ δῆτ’ ἀνὴρ γέρων διακονήσει;</l>
+                                    <l n="3">
+                                        B. οὐ δῆθ’· <app><lem wit="#Casaubon">ὁδοιποροῦντα</lem><rdg wit="#Athenaeus A">ὁδοιποροῦν· τὰ</rdg></app> γὰρ <app><lem wit="#Elmsley">τὰ</lem><rdg wit="#Athenaeus A">ταῦτα</rdg></app>πάντ’ ἐγὼ ποιήσω.
+                                </l>
+                                <l n="4">
+                                    A. τί δῆτα τοῦτ’ αὐτοῖς <app><lem wit="#Heringa">πλέον</lem><rdg wit="#Athenaeus A">πλεῖον</rdg></app>; B. πρόσεισιν αὔθ’ 
+                                    ἕκαστον 
+                                    </l>
+                                <l n="5">
+                                    τῶν σκευαρίων, ὅταν <app><lem wit="#Athenaeus A">καλῇ τι</lem><rdg wit="#Casaubon">καλῇ τις</rdg><rdg wit="#Bergk">καλῇται</rdg></app>· <app><lem wit="#Heringa">παρατίθου</lem><rdg wit="#Athaenaus A">παρατιθὼ</rdg><rdg wit="#Jacobs">παρατίθεσ’ ὦ</rdg></app> τράπεζα·
+                                </l>
+                                    <l n="6">
+                                        <app><lem wit="#Athenaeus CE">αὐτὴ παρασκεύαζε σαυτήν</lem><rdg wit="#Athenaeus A">αὕτη παρασκεύαζε σαυτόν</rdg><rdg wit="#Blaydes">κλίνη παρασκεύαζε σαυτήν</rdg></app>. μάττε θυλακίσκε. 
+                                    </l>
+                                    <l n="7">
+                                    ἔγχει κύαθε. ποὖσθ’ ἡ κύλιξ; <app><lem wit="#Dindorf">διάνιζ’ ἰοῦσα σαυτήν</lem><rdg wit="#Athenaeus A">λίανιζουσα. σεαυτήν</rdg><rdg wit="#Athenaeus CE">νίζε σεαυτήν</rdg><rdg wit="#Elmsley">ἰοῦσα νίζε σαυτήν</rdg><rdg wit="#Pierson">διάνιζε σύ γε σεαυτήν</rdg></app>.
+                            </l>
+                            
+                            
+                            <l n="8">ἀνάβαινε μᾶζα. τὴν χύτραν <app><lem wit="#Jacobs">χρῆν</lem><rdg  wit="#Athenaeus">χρὴ</rdg></app><app><lem wit="#Schweighäuser">ἐξερᾶν</lem><rdg wit="#Athenaeuas A">ἐξάιραντα</rdg><rdg wit="#Athenaeus C">ἐξ ἆραι τὰ</rdg><rdg wit="#Athenaeus E">ἐξᾶραι τὰ</rdg></app> τὰ τεῦτλα.</l>
+                                    <l n="9">ἰχθύ, βάδιζ’. ἀλλ’ <app><lem wit="#Erfurdt">οὐδέπω ’πὶ</lem><rdg wit="#Athenaeus A">οὐδέπω τἀπὶ</rdg><rdg wit="#Elmsley">οὐδέ τἀπὶ</rdg></app> θάτερ’ ὀπτός εἰμι.</l>
+                                    <l n="10">οὔκουν μεταστρέψας σεαυτὸν <app><lem wit="#Erfurdt">ἁλὶ πάσεις</lem><rdg wit="#Athenaeus A">αλειπασεισ</rdg><rdg wit="#Elmsley">ἁλσὶ πάσεις</rdg></app><app><lem wit="#Athenaeus A">ἀλείφων</lem><rdg wit="#Athenaeus CE">ἄλειφε</rdg></app>;</l>
+                            </lg>
+                        </div3>
+                    </p>
+                </div2>
+                
+            </div1>
+            
+        </body>
+    </text>
+</TEI>   
