@@ -8,14 +8,6 @@ function result(loc, hit) {
 function searchFragText(searchTerm, includeCon) {
     query = path + "/fragmentSearch.php?q=" + searchTerm + "&con=" + includeCon;
     var searchResponse = new XMLHttpRequest();
-    /*searchResponse.onreadystatechange= function() {
-	        if (searchResponse.readyState==4 && searchResponse.status==200) {
-			console.log(searchResponse.responseText);
-			results = JSON.parse(searchResponse.responseText);
-			return results;			
-			}
-		}*/
-
     searchResponse.open("GET", query, false);
     searchResponse.send();
 	resultList = JSON.parse(searchResponse.responseText);

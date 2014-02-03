@@ -56,6 +56,11 @@
         .active {
             text-decoration: underline;
         }
+        
+        .formfield * {
+            vertical-align:top
+            }
+        
         p {
             padding-left: 15px;
         }
@@ -63,6 +68,8 @@
         
         
         <script type="text/javascript">
+        path = "/demo/scripts/";
+        
         function tab(tab) {
             var i = 0;
             var tabCount = 4;
@@ -77,6 +84,31 @@
             document.getElementById(tab).style.display = 'block';
             document.getElementById('li_' + tab).setAttribute("class", "active");
         }
+
+        
+        function submitInfo(code) {
+            var suggestion = document.getElementById(code).value;
+            if (suggestion=="") {
+            document.getElementById(code).value="Please enter a valid submission."
+            }
+            
+            else {
+            document.getElementsByName("submitButton").disabled=true;
+            query = path + "infoSubmit.php?sug=" + suggestion + "&code=" + code;
+            var phpHook = new XMLHttpRequest();
+            phpHook.onreadystatechange = function () {
+                if (phpHook.readyState == 4 && phpHook.status == 200) {
+
+				if(phpHook.responseText==1) { document.getElementsByName("submitButton").disabled=false;
+                            document.getElementById(code).value = "Suggestion submitted."; }
+				else { alert("There has been a malfunction on the server; please try again later."); };
+                }
+            }
+            phpHook.open("GET", query, true);
+            phpHook.send();
+        }
+        }
+
     </script>
         
     </head>
@@ -122,21 +154,28 @@
                     <BR>
                         <label>Highlight All Cruces
                             <input type="checkbox" value="1" onclick="parent.textFrame.highlightCruces(this)" />
-                        </label>
+                        </label><BR><BR>
+                            <span class="formfield"><label>Submit errors, comments, and additional emmendations: </label><textarea id="addapp" rows="2" cols="60"></textarea></span>
+                            <input type="submit" value="send" name="submitButton" onclick="submitInfo('addapp')"/><BR>(NB: entries will be vetted before they are added)
                 </div>
                 
                 <div id="tab2" style="display: none;">
                     <center>Translation</center>
                     
-                        <BR>
-                            <BR><span id="trans"></span>
+                    <BR>
+                        <BR><span id="trans"></span>
                 </div>
                 <div id="tab3" style="display: none;">
                     <center>Bibliography</center>
                     <BR>
                         <BR><span id="bib"></span>
+                            <BR><BR>
+                                <span class="formfield"><label>Add additional bibliography:</label><textarea id="addbib" rows="2" cols="60"></textarea></span>
+                                <input type="submit" name="submitButton" value="send" onclick="submitInfo('addbib')"/><BR>(NB: entries will be vetted before they are added)
+                                    
                 </div>
             </div>
+            
     </body>
     
 </html>

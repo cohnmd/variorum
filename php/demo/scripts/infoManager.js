@@ -2,20 +2,20 @@ var fragNumber;
 var oldTag = "";
 
 function regFragment(fragment) {
-    parent.contFrame.document.getElementById("fragment").innerHTML = fragment;
+    parent.contFrame.document.onload = function() { parent.contFrame.document.getElementById("fragment").innerHTML = fragment };
     parent.title = fragment;
 }
 
 function regPlayName(playName) {
-    parent.contFrame.document.getElementById("playName").innerHTML = "<i>" + playName + "</i>";
+    parent.contFrame.document.onload = function() { parent.contFrame.document.getElementById("playName").innerHTML = "<i>" + playName + "</i>" } ;
 }
 
 function regSource(source) {
-    parent.contFrame.document.getElementById("source").innerHTML = source;
+    parent.contFrame.document.onload = function() { parent.contFrame.document.getElementById("source").innerHTML = source };
 }
 
 function regBuildInfo(buildInfo) {
-    parent.contFrame.document.getElementById("buildInfo").innerHTML = buildInfo;
+    parent.contFrame.document.onload = function() { parent.contFrame.document.getElementById("buildInfo").innerHTML = buildInfo };
 }
 
 function loadTags(fragNumber) {
@@ -81,7 +81,7 @@ function addTag() {
         if (newTag != "" && newTag != oldTag) {
             parent.contFrame.document.getElementById("tagButton").disabled = true;
             parent.contFrame.document.getElementById("newTag").value = "Adding tag. . .";
-            phpHook = new XMLHttpRequest();
+            var phpHook = new XMLHttpRequest();
             query = "http://" + document.location.hostname + "/demo/scripts/tableManager.php?num=" + fragNumber + "&tag=" + "'" + newTag + "'";
             phpHook.onreadystatechange = function () {
                 if (phpHook.readyState == 4 && phpHook.status == 200) {
