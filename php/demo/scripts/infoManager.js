@@ -41,9 +41,8 @@ function loadTags(fragNumber) {
                 n++;
             }
 	}
-            parent.contFrame.document.getElementById("tags").innerHTML = tags;
-	
-            tagEntry();
+            parent.addEventListener("load", function() { parent.contFrame.document.getElementById("tags").innerHTML = tags; tagEntry(); }, false); 
+            
         }
     }
     fusionResponse.open("GET", query, true);
