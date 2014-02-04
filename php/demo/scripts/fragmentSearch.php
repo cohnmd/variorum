@@ -27,6 +27,8 @@ echo "No fragments to search; something on the server end has been misconfigured
 }
 
 else {
+    natsort($fragments);
+    $fragments = array_values($fragments);
     foreach ($fragments as $frag) {
     if (stristr($frag, '.xml')!=false) {
     searchFrag($frag);  
