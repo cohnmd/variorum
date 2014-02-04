@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Krates fr. 2</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Generated on 2/4/2014</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Based on K.-A., Bonanno, and others</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p></p>
+            </editorialDecl>
+            <variantEncoding method="parallel-segmentation" location="internal"/>
+            <listWit>
+                <witness xml:id="Athenaeus">#Athenaeus</witness>
+                <editor xml:id="Porson">#Porson</editor>
+                <editor xml:id="Bergk">#Bergk</editor>
+                <editor xml:id="Bothe">#Bothe</editor>
+            </listWit>
+        </encodingDesc>
+        
+    </teiHeader>
+    
+    <text>
+        <body> 
+            <div1 type="comedy" xml:id="Rhetores">
+                <div2 type="sourceText" xml:id="Athenaeus 15.690D">
+                    <p>βασιλείου δὲ μύρου μνημονεύει Κράτης ἐν Γείτοσιν λέγων οὕτως·</p>
+                    <div3 type="frag" xml:id="2">
+                        <lg>
+                            <l n="1">
+                                γλυκύτατον <app><lem wit="#Porson">δ’ ὦζε</lem><rdg wit="#Athenaeus">δὲ ὦ Ζεῦ</rdg><rdg wit="#Bergk">ὦ Ζεῦ δ’ ὦζε</rdg></app> βασιλείου μύρου.
+                            </l>
+                            
+                        </lg>
+                    </div3>
+                </div2>
+            </div1>
+        </body>
+    </text>
+</TEI>   

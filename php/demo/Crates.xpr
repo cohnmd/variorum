@@ -10,7 +10,7 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>fragments/encodedFragments/kratesfr30.xml</String>
+                                    <String>fragments/encodedFragments/kratesfr2.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -25,7 +25,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>fragments/encodedFragments/kratesfr27.xml</String>
+                                    <String>fragments/encodedFragments/kratesfr30.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -70,7 +70,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>fragments/encodedFragments/kratesfr1.xml</String>
+                                    <String>fragments/encodedFragments/kratesfr27.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -85,7 +85,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>fragments/encodedFragments/kratesfr2.xml</String>
+                                    <String>fragments/encodedFragments/kratesfr1.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -318,6 +318,7 @@
         <file name="java.js"/>
         <file name="fragments/encodedFragments/kratesfr1.xml"/>
         <file name="fragments/encodedFragments/kratesfr16.xml"/>
+        <file name="fragments/encodedFragments/kratesfr2.xml"/>
         <file name="fragments/encodedFragments/kratesfr21.xml"/>
         <file name="fragments/encodedFragments/kratesfr27.xml"/>
         <file name="fragments/encodedFragments/kratesfr30.xml"/>
