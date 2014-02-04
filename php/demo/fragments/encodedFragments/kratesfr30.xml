@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Krates fr. 30</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Generated on 2/4/2014</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Based on K.-A., Bonanno, and others</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p></p>
+            </editorialDecl>
+            <variantEncoding method="parallel-segmentation" location="internal"/>
+            <listWit>
+                <witness xml:id="Athenaeus A">#Athenaeus</witness>
+                <witness xml:id="Athenaeus">#Athenaeus</witness>
+                <editor xml:id="Wilamowitz">#Wilamowitz</editor>
+            </listWit>
+        </encodingDesc>
+        
+    </teiHeader>
+    
+    <text>
+        <body> 
+            <div1 type="comedy" xml:id="Lamia">
+                <div2 type="sourceText" xml:id="Athenaeus 9.369C">
+                    <p>Κηφισιακῶν δὲ γογγυλίδων μνημονεύει Κράτης ἐν Ῥήτορσιν οὕτως·</p>
+                    <div3 type="frag" xml:id="30">
+                        <lg>
+                            <l n="1">
+                                Κηφισιακαῖσι γογγυλίσιν ὅμοια <app><lem wit="#Athenaeus">πάνυ</lem><rdg wit="#Wilamowitz">πνεῖ</rdg></app>.
+                            </l>
+                            
+                        </lg>
+                    </div3>
+                </div2>
+            </div1>
+        </body>
+    </text>
+</TEI>   

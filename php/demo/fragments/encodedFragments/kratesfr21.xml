@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Krates fr. 21</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Generated on 2/4/2014</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Based on K.-A., Bonanno, and others</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p></p>
+            </editorialDecl>
+            <variantEncoding method="parallel-segmentation" location="internal"/>
+            <listWit>
+                <witness xml:id="Athenaeus">#Athenaeus</witness>
+                <editor xml:id="Casaubon">#Casaubon</editor>
+                            </listWit>
+        </encodingDesc>
+        
+    </teiHeader>
+    
+    <text>
+        <body> 
+            <div1 type="comedy" xml:id="Lamia">
+                <div2 type="sourceText" xml:id="Athenaeus 10.418C">
+                    <p>ὅτι δὲ καὶ πάντες Θετταλοὶ ὡς πολυφάγοι διεβάλλοντο Κράτης φησὶν ἐν Λαμίᾳ·</p>
+                        <div3 type="frag" xml:id="21">
+                            <lg>
+                                <l n="1"><app><lem wit="#Casaubon">ἔπη</lem><wit rdg="#Athenaeus">ἐπεὶ</wit></app> τριπήχη Θετταλικῶς τετμημένα.</l>
+                                
+                            </lg>
+                        </div3>
+                    <p>τοῦτο δ’ εἶπεν ὡς τῶν Θετταλῶν μεγάλα κρέα τεμνόντων.</p>
+                </div2>
+                
+            </div1>
+            
+        </body>
+    </text>
+</TEI>   

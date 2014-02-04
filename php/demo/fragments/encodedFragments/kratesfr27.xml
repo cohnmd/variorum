@@ -21,7 +21,7 @@
          </editorialDecl>
          <variantEncoding method="parallel-segmentation" location="internal"/>
          <listWit>
-            <witness xml:id="Athenaeus">#Athenaeus of Naucratis</witness>
+            <witness xml:id="Athenaeus">#Athenaeus</witness>
             <editor xml:id="CE">#Athenaeus CE</editor>
             <editor xml:id="A">#Athenaeus A</editor>
             <editor xml:id="Erfudt">#Erfudt
