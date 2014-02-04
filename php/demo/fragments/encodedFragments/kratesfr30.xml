@@ -21,7 +21,6 @@
             </editorialDecl>
             <variantEncoding method="parallel-segmentation" location="internal"/>
             <listWit>
-                <witness xml:id="Athenaeus A">#Athenaeus</witness>
                 <witness xml:id="Athenaeus">#Athenaeus</witness>
                 <editor xml:id="Wilamowitz">#Wilamowitz</editor>
             </listWit>
@@ -31,7 +30,7 @@
     
     <text>
         <body> 
-            <div1 type="comedy" xml:id="Lamia">
+            <div1 type="comedy" xml:id="Rhetores">
                 <div2 type="sourceText" xml:id="Athenaeus 9.369C">
                     <p>Κηφισιακῶν δὲ γογγυλίδων μνημονεύει Κράτης ἐν Ῥήτορσιν οὕτως·</p>
                     <div3 type="frag" xml:id="30">

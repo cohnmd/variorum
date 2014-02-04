@@ -320,6 +320,7 @@
         <file name="fragments/encodedFragments/kratesfr16.xml"/>
         <file name="fragments/encodedFragments/kratesfr21.xml"/>
         <file name="fragments/encodedFragments/kratesfr27.xml"/>
+        <file name="fragments/encodedFragments/kratesfr30.xml"/>
         <file name="search.html"/>
         <file name="scripts/searchJS.js"/>
         <file name="scripts/suggestionSubmit.php"/>

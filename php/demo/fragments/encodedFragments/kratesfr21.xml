@@ -35,7 +35,7 @@
                     <p>ὅτι δὲ καὶ πάντες Θετταλοὶ ὡς πολυφάγοι διεβάλλοντο Κράτης φησὶν ἐν Λαμίᾳ·</p>
                         <div3 type="frag" xml:id="21">
                             <lg>
-                                <l n="1"><app><lem wit="#Casaubon">ἔπη</lem><wit rdg="#Athenaeus">ἐπεὶ</wit></app> τριπήχη Θετταλικῶς τετμημένα.</l>
+                                <l n="1"><app><lem wit="#Casaubon">ἔπη</lem><rdg wit="#Athenaeus">ἐπεὶ</rdg></app> τριπήχη Θετταλικῶς τετμημένα.</l>
                                 
                             </lg>
                         </div3>
