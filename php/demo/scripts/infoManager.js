@@ -141,6 +141,10 @@ function manageContext() {
     contextCheck.onclick = displayContext;
     label.appendChild(contextCheck);
     parent.contFrame.document.getElementById("contextManager").appendChild(label);
+	var footer = document.createElement("p");
+	footer.setAttribute("style", "position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;");
+	footer.innerHTML = "Send questions, comments, and bugs to: <a href='mailto:cohnmd@umich.edu'>Matt Cohn</a>";
+    parent.textFrame.document.body.appendChild(footer);
 }
 
 function displayContext() {

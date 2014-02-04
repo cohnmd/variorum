@@ -9,6 +9,7 @@
             <xsl:apply-templates select="//tei:teiHeader"/>
             <body>            
                 <xsl:apply-templates select="//tei:div1"/>
+
             </body>
             
             <script type="text/javascript">               
