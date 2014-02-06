@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_lite.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Krates fr. 37</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Generated on 2/6/2014</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Based on K.-A., Bonanno, and others</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p></p>
+            </editorialDecl>
+            <variantEncoding method="parallel-segmentation" location="internal"/>
+            <listWit>
+                <witness xml:id="Athenaeus">#Athenaeus</witness>
+                <editor xml:id="Henricus">#Henricus van Herwerden</editor>
+                <editor xml:id="Bonanno">#Bonanno</editor>
+                <editor xml:id="A">#Athenaeus A</editor>
+                <editor xml:id="Porson">#Porson</editor>
+                <editor xml:id="Casaubon">#Casaubon
+                <editor xml:id="Bergk">#Bergk</editor>
+                </editor>            
+            </listWit>
+        </encodingDesc>
+        
+    </teiHeader>
+    
+    <text>
+        <body> 
+            <div1 type="comedy" xml:id="Tolmai">
+                <div2 type="sourceText" xml:id="Athenaeus 6.247F">
+                    <p>καλεῖται δ’ οἰκόσιτος ὁ μὴ μισθοῦ, ἀλλὰ προῖκα τῇ πόλει ὑπηρετῶν ... ἐπισιτίου δὲ Κράτης Τόλμαις·</p>
+                        <div3 type="frag" xml:id="37">
+                            <lg>
+                                <l n="1"><app><lem wit="#Athenaeus A">ποιμαίνει δ’ ἐπισίτιον</lem><rdg wit="#Porson">ποιμαίνει δ’ ἐπίσιτον</rdg><rdg wit="#Bonanno">ποιμανεῖτ’ ἐπισίτιος</rdg><rdg wit="#Henricus van Herwerden">ποιμανεῖ δ’ ἐπισίτιον</rdg></app>·</l>
+                                <l n="2"><app><lem wit="#Athenaeus">ῥιγῶν</lem><rdg wit="#Porson">ῥιγῶντ’</rdg></app> δ’ ἐν <app><lem wit="#Casaubon">Μεγαβύζου</lem><rdg wit="#Athenaeus A">μεταβύζου</rdg></app></l>
+                                <l n="3"><app><lem wit="#Athenaeus A">†δέξετ’ ἐπὶ μισθῷ σῖτος†</lem><rdg wit="#Porson">δέξεταί τ’ ἐπὶ μιθῷ | σῖτον</rdg><rdg wit="#Bergk">δέξει δῆτ’ ἐπὶ μιθῷ | σῖτον</rdg></app></l>
+                            </lg>
+                        </div3>
+               
+                </div2>
+                
+            </div1>
+            
+        </body>
+    </text>
+</TEI>   
