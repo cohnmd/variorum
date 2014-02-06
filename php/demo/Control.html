@@ -90,22 +90,26 @@
         
         function submitInfo(code) {
             var suggestion = document.getElementById(code).value;
-            if (suggestion=="") {
-            document.getElementById(code).value="Please enter a valid submission."
+            if (suggestion=="" || suggestion=="Suggestion submitted." || suggestion=="Please enter a valid submission.") {
+            document.getElementById(code).value="Please enter a valid submission.";
             }
             
             else {
             document.getElementsByName("submitButton").disabled=true;
-            query = path + "suggestionSubmit.php?sug=" + suggestion + "&code=" + code;
-            var phpHook = new XMLHttpRequest();
+	        document.body.style.cursor = "wait";
+            query = path + "suggestionSubmit.php?sug=" + suggestion + "&code=" + code + "&or=" + parent.textFrame.location.pathname.split("/").slice(-1);
+        	    var phpHook = new XMLHttpRequest();
             phpHook.onreadystatechange = function () {
                 if (phpHook.readyState == 4 && phpHook.status == 200) {
 
-				if(phpHook.responseText==1) { document.getElementsByName("submitButton").disabled=false;
-                            document.getElementById(code).value = "Suggestion submitted."; }
-				else { alert("There has been a malfunction on the server; please try again later."); };
+				if(phpHook.responseText==1) {
+			        document.getElementsByName("submitButton").disabled=false;
+                    document.getElementById(code).value = "Suggestion submitted."; }
+				    else { alert("There has been a malfunction on the server; please try again later."); };
+		            document.body.style.cursor = "default";
                 }
-            }
+
+		}
             phpHook.open("GET", query, true);
             phpHook.send();
         }
@@ -141,12 +145,12 @@
                         <BR></BR>
                         <table><tr style="vertical-align:top;"><td>Tags:</td><td><div class="box" id="tags"></div></td></tr></table>
                         <BR>
-                        <span id="addTag"></span>
-                        <BR></BR>
-                        <span id="contextManager"></span><BR><BR><BR><BR><a href="search.html" target="_top">Access other fragments</a><BR><BR>
-                            <a href="../index.html" target="_top">What is this project?</a>
+                            <span id="addTag"></span>
+                            <BR></BR>
+                            <span id="contextManager"></span><BR><BR><BR><BR><a href="search.html" target="_top">Access other fragments</a><BR><BR>
+                                <a href="../index.html" target="_top">What is this project?</a>
                     </p>
-</div>
+                </div>
                 
                 <div id="tab1" style="display: none;">
                     <center>Editors and their Emmendations:
@@ -179,6 +183,6 @@
                 </div>
             </div>
             
-
-</body>
+            
+    </body>
 </html>

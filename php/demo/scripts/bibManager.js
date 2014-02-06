@@ -1,5 +1,5 @@
 function loadBib(fragNumber) {
-
+    parent.addEventListener("load", function() {    	
     var tableID = "1yoWR-RMIDTDzajMKJrtn_QojabB8927R61fkYpw"; //table ID for bibliography
     var key = "AIzaSyCblijNi4TBgM8rF6aaGurTGRrnhsgHxf0";
     var queryHeader = "https://www.googleapis.com/fusiontables/v1/query?sql=";
@@ -14,6 +14,7 @@ function loadBib(fragNumber) {
     }
     fusionResponse.open("GET", query, true);
     fusionResponse.send();
+}, false);
 }
 
 function genBib(responseText) {

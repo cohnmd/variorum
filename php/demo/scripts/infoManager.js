@@ -20,7 +20,7 @@ function regBuildInfo(buildInfo) {
 
 function loadTags(fragNumber) {
 	parent.addEventListener("load", function() { 
-    parent.contFrame.document.getElementById("tags").innerHTML = "Loading. . ."
+    parent.contFrame.document.getElementById("tags").innerHTML = "Loading. . .";
 	            
 
     this.fragNumber = fragNumber;
