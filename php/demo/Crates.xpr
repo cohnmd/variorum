@@ -352,6 +352,7 @@
         <file name="fragments/encodedFragments/kratesfr21.xml"/>
         <file name="fragments/encodedFragments/kratesfr30.xml"/>
         <file name="fragments/encodedFragments/kratesfr32.xml"/>
+        <file name="fragments/encodedFragments/kratesfr37.xml"/>
         <file name="search.html"/>
         <file name="scripts/searchJS.js"/>
         <file name="scripts/suggestionSubmit.php"/>

@@ -38,12 +38,12 @@
         <body> 
             <div1 type="comedy" xml:id="Tolmai">
                 <div2 type="sourceText" xml:id="Athenaeus 6.247F">
-                    <p>καλεῖται δ’ οἰκόσιτος ὁ μὴ μισθοῦ, ἀλλὰ προῖκα τῇ πόλει ὑπηρετῶν ... ἐπισιτίου δὲ Κράτης Τόλμαις·</p>
+                    <p>ἐπισιτίου δὲ Κράτης Τόλμαις·</p>
                         <div3 type="frag" xml:id="37">
                             <lg>
                                 <l n="1"><app><lem wit="#Athenaeus A">ποιμαίνει δ’ ἐπισίτιον</lem><rdg wit="#Porson">ποιμαίνει δ’ ἐπίσιτον</rdg><rdg wit="#Bonanno">ποιμανεῖτ’ ἐπισίτιος</rdg><rdg wit="#Henricus van Herwerden">ποιμανεῖ δ’ ἐπισίτιον</rdg></app>·</l>
                                 <l n="2"><app><lem wit="#Athenaeus">ῥιγῶν</lem><rdg wit="#Porson">ῥιγῶντ’</rdg></app> δ’ ἐν <app><lem wit="#Casaubon">Μεγαβύζου</lem><rdg wit="#Athenaeus A">μεταβύζου</rdg></app></l>
-                                <l n="3"><app><lem wit="#Athenaeus A">†δέξετ’ ἐπὶ μισθῷ σῖτος†</lem><rdg wit="#Porson">δέξεταί τ’ ἐπὶ μιθῷ | σῖτον</rdg><rdg wit="#Bergk">δέξει δῆτ’ ἐπὶ μιθῷ | σῖτον</rdg></app></l>
+                                <l n="3"><app><lem wit="#Athenaeus A">†δέξετ’ ἐπὶ μισθῷ σῖτος†</lem><rdg wit="#Porson">δέξεταί τ’ ἐπὶ μισθῷ | σῖτον</rdg><rdg wit="#Bergk">δέξει δῆτ’ ἐπὶ μισθῷ | σῖτον</rdg></app></l>
                             </lg>
                         </div3>
                
