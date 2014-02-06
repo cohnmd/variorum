@@ -4,7 +4,7 @@ function loadTrans(fragNumber) {
     var key = "AIzaSyCblijNi4TBgM8rF6aaGurTGRrnhsgHxf0";
     var queryHeader = "https://www.googleapis.com/fusiontables/v1/query?sql=";
     query = queryHeader + "SELECT Translation FROM " + tableID + " WHERE Number=" + fragNumber + "&key=" + key;
-    parent.addEventListener("load", fuction() {
+    parent.addEventListener("load", function() {
     parent.contFrame.document.getElementById("trans").innerHTML = "Loading. . ."
     var fusionResponse = null;
     fusionResponse = new XMLHttpRequest();
@@ -17,6 +17,7 @@ function loadTrans(fragNumber) {
     fusionResponse.send();
     }
 }, false);
+
 }
 
 function addTranslation(parsedResult) {
