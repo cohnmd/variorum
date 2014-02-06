@@ -44,7 +44,7 @@ function loadTags(fragNumber) {
                 n++;
             }
 	}
-	            parent.contFrame.document.getElementById("tags").innerHTML = tags;
+	        parent.contFrame.document.getElementById("tags").innerHTML = tags;
             tagEntry();	
         }
     }
